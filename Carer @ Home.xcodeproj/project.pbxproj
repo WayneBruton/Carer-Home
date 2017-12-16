@@ -7,21 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4779A9DA1A456054203FC5E3 /* Pods_Carer___Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7827E975F137D5C5538965 /* Pods_Carer___Home.framework */; };
 		B012337B1FCD23BE00B06B3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012337A1FCD23BE00B06B3A /* AppDelegate.swift */; };
-		B012337D1FCD23BE00B06B3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012337C1FCD23BE00B06B3A /* ViewController.swift */; };
 		B01233801FCD23BE00B06B3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B012337E1FCD23BE00B06B3A /* Main.storyboard */; };
 		B01233821FCD23BE00B06B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01233811FCD23BE00B06B3A /* Assets.xcassets */; };
 		B01233851FCD23BE00B06B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01233831FCD23BE00B06B3A /* LaunchScreen.storyboard */; };
+		B012338D1FCD23D500B06B3A /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012338C1FCD23D500B06B3A /* InitialViewController.swift */; };
+		B01AF5EB1FE3B88400220113 /* FallRiskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01AF5EA1FE3B88400220113 /* FallRiskVC.swift */; };
+		B01D64F61FD81E5A00DCCD13 /* TemperatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01D64F51FD81E5A00DCCD13 /* TemperatureVC.swift */; };
+		B02FAE071FD68561000A6E96 /* BloodPressureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02FAE061FD68561000A6E96 /* BloodPressureVC.swift */; };
+		B03DEBEF1FD18F850043E91C /* UserPreferencesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03DEBEE1FD18F850043E91C /* UserPreferencesVC.swift */; };
+		B03DEBF11FD18FA80043E91C /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03DEBF01FD18FA80043E91C /* ContactsVC.swift */; };
+		B03DEBF31FD18FC30043E91C /* PatientsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03DEBF21FD18FC30043E91C /* PatientsVC.swift */; };
+		B03DEBF51FD18FE20043E91C /* MessagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03DEBF41FD18FE20043E91C /* MessagesVC.swift */; };
+		B03DEBF71FD18FFF0043E91C /* ReportsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03DEBF61FD18FFF0043E91C /* ReportsVC.swift */; };
+		B03DEBF91FD1901A0043E91C /* FeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03DEBF81FD1901A0043E91C /* FeedbackVC.swift */; };
+		B03DEBFB1FD190330043E91C /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03DEBFA1FD190330043E91C /* NewsVC.swift */; };
+		B0465AC61FCDBFDC0097FA42 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0465AC51FCDBFDC0097FA42 /* RegisterViewController.swift */; };
+		B0465ACC1FCDC0680097FA42 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B0465ACB1FCDC0680097FA42 /* Default-568h@2x.png */; };
+		B04D503A1FD7C07300FECD2B /* PulseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D50391FD7C07300FECD2B /* PulseVC.swift */; };
+		B071FFC41FD6C2FA00640132 /* FluidIntakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B071FFC31FD6C2FA00640132 /* FluidIntakeVC.swift */; };
+		B07D03DD1FDBFD6A00C81255 /* BloodSugarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D03DC1FDBFD6A00C81255 /* BloodSugarVC.swift */; };
+		B081D5D51FD283D10089A5FE /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B081D5D41FD283D10089A5FE /* Conversions.swift */; };
+		B0864A4B1FD573C7000AEA68 /* patientDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0864A4A1FD573C7000AEA68 /* patientDetailVC.swift */; };
+		B09D234E1FDFABA400750C74 /* BarChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D234D1FDFABA400750C74 /* BarChartVC.swift */; };
+		B0A65D2E1FDA8D4D0046AEA6 /* keyboard_tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B0A65D2D1FDA8D4D0046AEA6 /* keyboard_tap.mp3 */; };
+		B0BDEA431FDD0734006D0C65 /* ClickSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDEA421FDD0734006D0C65 /* ClickSound.swift */; };
+		B0BE21681FE2384A00848D30 /* LineChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE21671FE2384A00848D30 /* LineChartVC.swift */; };
+		B0C5C0271FDAA0F800374E7A /* PainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C5C0261FDAA0F800374E7A /* PainVC.swift */; };
+		B0EEF77E1FCECE5A00CE759A /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EEF77D1FCECE5A00CE759A /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B01233771FCD23BE00B06B3A /* Carer @ Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carer @ Home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B012337A1FCD23BE00B06B3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B012337C1FCD23BE00B06B3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B012337F1FCD23BE00B06B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B01233811FCD23BE00B06B3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B01233841FCD23BE00B06B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B01233861FCD23BE00B06B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B012338C1FCD23D500B06B3A /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		B01AF5EA1FE3B88400220113 /* FallRiskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallRiskVC.swift; sourceTree = "<group>"; };
+		B01D64F51FD81E5A00DCCD13 /* TemperatureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureVC.swift; sourceTree = "<group>"; };
+		B02FAE061FD68561000A6E96 /* BloodPressureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureVC.swift; sourceTree = "<group>"; };
+		B03DEBEE1FD18F850043E91C /* UserPreferencesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesVC.swift; sourceTree = "<group>"; };
+		B03DEBF01FD18FA80043E91C /* ContactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsVC.swift; sourceTree = "<group>"; };
+		B03DEBF21FD18FC30043E91C /* PatientsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsVC.swift; sourceTree = "<group>"; };
+		B03DEBF41FD18FE20043E91C /* MessagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesVC.swift; sourceTree = "<group>"; };
+		B03DEBF61FD18FFF0043E91C /* ReportsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsVC.swift; sourceTree = "<group>"; };
+		B03DEBF81FD1901A0043E91C /* FeedbackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackVC.swift; sourceTree = "<group>"; };
+		B03DEBFA1FD190330043E91C /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		B0465AC51FCDBFDC0097FA42 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		B0465ACB1FCDC0680097FA42 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B04D50391FD7C07300FECD2B /* PulseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseVC.swift; sourceTree = "<group>"; };
+		B071FFC31FD6C2FA00640132 /* FluidIntakeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluidIntakeVC.swift; sourceTree = "<group>"; };
+		B07D03DC1FDBFD6A00C81255 /* BloodSugarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodSugarVC.swift; sourceTree = "<group>"; };
+		B081D5D41FD283D10089A5FE /* Conversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversions.swift; sourceTree = "<group>"; };
+		B0864A4A1FD573C7000AEA68 /* patientDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientDetailVC.swift; sourceTree = "<group>"; };
+		B09D234D1FDFABA400750C74 /* BarChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartVC.swift; sourceTree = "<group>"; };
+		B0A65D2D1FDA8D4D0046AEA6 /* keyboard_tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = keyboard_tap.mp3; sourceTree = "<group>"; };
+		B0BDEA421FDD0734006D0C65 /* ClickSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickSound.swift; sourceTree = "<group>"; };
+		B0BE21671FE2384A00848D30 /* LineChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartVC.swift; sourceTree = "<group>"; };
+		B0C5C0261FDAA0F800374E7A /* PainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainVC.swift; sourceTree = "<group>"; };
+		B0EEF77D1FCECE5A00CE759A /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		BBCC27988F86FD584FA4942B /* Pods-Carer @ Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carer @ Home.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carer @ Home/Pods-Carer @ Home.debug.xcconfig"; sourceTree = "<group>"; };
+		DA7827E975F137D5C5538965 /* Pods_Carer___Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Carer___Home.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F794B8970B4E107C6DC5843E /* Pods-Carer @ Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carer @ Home.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carer @ Home/Pods-Carer @ Home.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +79,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4779A9DA1A456054203FC5E3 /* Pods_Carer___Home.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0104C97F08697CFAD1FD4428 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA7827E975F137D5C5538965 /* Pods_Carer___Home.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA06FFF827D270189FFF5481 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BBCC27988F86FD584FA4942B /* Pods-Carer @ Home.debug.xcconfig */,
+				F794B8970B4E107C6DC5843E /* Pods-Carer @ Home.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B012336E1FCD23BE00B06B3A = {
 			isa = PBXGroup;
 			children = (
+				B0465ACB1FCDC0680097FA42 /* Default-568h@2x.png */,
 				B01233791FCD23BE00B06B3A /* Carer @ Home */,
 				B01233781FCD23BE00B06B3A /* Products */,
+				AA06FFF827D270189FFF5481 /* Pods */,
+				0104C97F08697CFAD1FD4428 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +125,100 @@
 		B01233791FCD23BE00B06B3A /* Carer @ Home */ = {
 			isa = PBXGroup;
 			children = (
-				B012337A1FCD23BE00B06B3A /* AppDelegate.swift */,
-				B012337C1FCD23BE00B06B3A /* ViewController.swift */,
-				B012337E1FCD23BE00B06B3A /* Main.storyboard */,
-				B01233811FCD23BE00B06B3A /* Assets.xcassets */,
-				B01233831FCD23BE00B06B3A /* LaunchScreen.storyboard */,
+				B0465ACA1FCDC0420097FA42 /* Supportive Files */,
+				B0465AC91FCDC0040097FA42 /* Assets */,
+				B0465AC81FCDBFF60097FA42 /* Views */,
+				B0465AC71FCDBFED0097FA42 /* Model */,
+				B0A65D2D1FDA8D4D0046AEA6 /* keyboard_tap.mp3 */,
 				B01233861FCD23BE00B06B3A /* Info.plist */,
 			);
 			path = "Carer @ Home";
+			sourceTree = "<group>";
+		};
+		B02FAE031FD68261000A6E96 /* Patients */ = {
+			isa = PBXGroup;
+			children = (
+				B0864A4A1FD573C7000AEA68 /* patientDetailVC.swift */,
+				B02FAE051FD682E1000A6E96 /* Patient Tests */,
+			);
+			path = Patients;
+			sourceTree = "<group>";
+		};
+		B02FAE041FD6829C000A6E96 /* HomeVC Details */ = {
+			isa = PBXGroup;
+			children = (
+				B03DEBFA1FD190330043E91C /* NewsVC.swift */,
+				B03DEBF81FD1901A0043E91C /* FeedbackVC.swift */,
+				B03DEBF61FD18FFF0043E91C /* ReportsVC.swift */,
+				B03DEBF41FD18FE20043E91C /* MessagesVC.swift */,
+				B03DEBF01FD18FA80043E91C /* ContactsVC.swift */,
+				B03DEBEE1FD18F850043E91C /* UserPreferencesVC.swift */,
+				B03DEBF21FD18FC30043E91C /* PatientsVC.swift */,
+				B02FAE031FD68261000A6E96 /* Patients */,
+			);
+			path = "HomeVC Details";
+			sourceTree = "<group>";
+		};
+		B02FAE051FD682E1000A6E96 /* Patient Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B02FAE061FD68561000A6E96 /* BloodPressureVC.swift */,
+				B071FFC31FD6C2FA00640132 /* FluidIntakeVC.swift */,
+				B04D50391FD7C07300FECD2B /* PulseVC.swift */,
+				B01D64F51FD81E5A00DCCD13 /* TemperatureVC.swift */,
+				B0C5C0261FDAA0F800374E7A /* PainVC.swift */,
+				B07D03DC1FDBFD6A00C81255 /* BloodSugarVC.swift */,
+				B01AF5EA1FE3B88400220113 /* FallRiskVC.swift */,
+				B09D234C1FDFAB8000750C74 /* Charts */,
+			);
+			path = "Patient Tests";
+			sourceTree = "<group>";
+		};
+		B0465AC71FCDBFED0097FA42 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B012337A1FCD23BE00B06B3A /* AppDelegate.swift */,
+				B012338C1FCD23D500B06B3A /* InitialViewController.swift */,
+				B0465AC51FCDBFDC0097FA42 /* RegisterViewController.swift */,
+				B0EEF77D1FCECE5A00CE759A /* HomeVC.swift */,
+				B02FAE041FD6829C000A6E96 /* HomeVC Details */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B0465AC81FCDBFF60097FA42 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B012337E1FCD23BE00B06B3A /* Main.storyboard */,
+				B01233831FCD23BE00B06B3A /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B0465AC91FCDC0040097FA42 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B01233811FCD23BE00B06B3A /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		B0465ACA1FCDC0420097FA42 /* Supportive Files */ = {
+			isa = PBXGroup;
+			children = (
+				B081D5D41FD283D10089A5FE /* Conversions.swift */,
+				B0BDEA421FDD0734006D0C65 /* ClickSound.swift */,
+			);
+			path = "Supportive Files";
+			sourceTree = "<group>";
+		};
+		B09D234C1FDFAB8000750C74 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				B09D234D1FDFABA400750C74 /* BarChartVC.swift */,
+				B0BE21671FE2384A00848D30 /* LineChartVC.swift */,
+			);
+			path = Charts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B01233891FCD23BE00B06B3A /* Build configuration list for PBXNativeTarget "Carer @ Home" */;
 			buildPhases = (
+				1D4C0CD1449FD064F968D3D9 /* [CP] Check Pods Manifest.lock */,
 				B01233731FCD23BE00B06B3A /* Sources */,
 				B01233741FCD23BE00B06B3A /* Frameworks */,
 				B01233751FCD23BE00B06B3A /* Resources */,
+				762401F48F63375228792A1C /* [CP] Embed Pods Frameworks */,
+				2B6C85B27DC2ADA23D319C75 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,7 +283,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A65D2E1FDA8D4D0046AEA6 /* keyboard_tap.mp3 in Resources */,
 				B01233851FCD23BE00B06B3A /* LaunchScreen.storyboard in Resources */,
+				B0465ACC1FCDC0680097FA42 /* Default-568h@2x.png in Resources */,
 				B01233821FCD23BE00B06B3A /* Assets.xcassets in Resources */,
 				B01233801FCD23BE00B06B3A /* Main.storyboard in Resources */,
 			);
@@ -131,13 +293,100 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D4C0CD1449FD064F968D3D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Carer @ Home-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B6C85B27DC2ADA23D319C75 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Carer @ Home/Pods-Carer @ Home-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		762401F48F63375228792A1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Carer @ Home/Pods-Carer @ Home-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework",
+				"${BUILT_PRODUCTS_DIR}/MARoundButton/MARoundButton.framework",
+				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/RoundedSwitch/RoundedSwitch.framework",
+				"${BUILT_PRODUCTS_DIR}/SGauge/SGauge.framework",
+				"${BUILT_PRODUCTS_DIR}/VerticalSteppedSlider/VerticalSteppedSlider.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GMStepper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MARoundButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RoundedSwitch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SGauge.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VerticalSteppedSlider.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Carer @ Home/Pods-Carer @ Home-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B01233731FCD23BE00B06B3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B012337D1FCD23BE00B06B3A /* ViewController.swift in Sources */,
+				B03DEBF31FD18FC30043E91C /* PatientsVC.swift in Sources */,
+				B03DEBF91FD1901A0043E91C /* FeedbackVC.swift in Sources */,
+				B0BDEA431FDD0734006D0C65 /* ClickSound.swift in Sources */,
+				B0465AC61FCDBFDC0097FA42 /* RegisterViewController.swift in Sources */,
+				B03DEBF71FD18FFF0043E91C /* ReportsVC.swift in Sources */,
+				B0EEF77E1FCECE5A00CE759A /* HomeVC.swift in Sources */,
+				B03DEBFB1FD190330043E91C /* NewsVC.swift in Sources */,
+				B012338D1FCD23D500B06B3A /* InitialViewController.swift in Sources */,
+				B071FFC41FD6C2FA00640132 /* FluidIntakeVC.swift in Sources */,
+				B03DEBF51FD18FE20043E91C /* MessagesVC.swift in Sources */,
 				B012337B1FCD23BE00B06B3A /* AppDelegate.swift in Sources */,
+				B04D503A1FD7C07300FECD2B /* PulseVC.swift in Sources */,
+				B081D5D51FD283D10089A5FE /* Conversions.swift in Sources */,
+				B0C5C0271FDAA0F800374E7A /* PainVC.swift in Sources */,
+				B01D64F61FD81E5A00DCCD13 /* TemperatureVC.swift in Sources */,
+				B0BE21681FE2384A00848D30 /* LineChartVC.swift in Sources */,
+				B02FAE071FD68561000A6E96 /* BloodPressureVC.swift in Sources */,
+				B03DEBEF1FD18F850043E91C /* UserPreferencesVC.swift in Sources */,
+				B09D234E1FDFABA400750C74 /* BarChartVC.swift in Sources */,
+				B03DEBF11FD18FA80043E91C /* ContactsVC.swift in Sources */,
+				B07D03DD1FDBFD6A00C81255 /* BloodSugarVC.swift in Sources */,
+				B0864A4B1FD573C7000AEA68 /* patientDetailVC.swift in Sources */,
+				B01AF5EB1FE3B88400220113 /* FallRiskVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,31 +521,35 @@
 		};
 		B012338A1FCD23BE00B06B3A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBCC27988F86FD584FA4942B /* Pods-Carer @ Home.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6P55Y23B72;
 				INFOPLIST_FILE = "Carer @ Home/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bruton.Carer---Home";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		B012338B1FCD23BE00B06B3A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F794B8970B4E107C6DC5843E /* Pods-Carer @ Home.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6P55Y23B72;
 				INFOPLIST_FILE = "Carer @ Home/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bruton.Carer---Home";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
