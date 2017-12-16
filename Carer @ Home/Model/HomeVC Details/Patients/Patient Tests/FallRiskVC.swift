@@ -9,9 +9,14 @@
 import UIKit
 
 class FallRiskVC: UIViewController {
+    
+    var pageViewController:UIPageViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //self.pageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as! UIPageViewController
+        
 
     }
 

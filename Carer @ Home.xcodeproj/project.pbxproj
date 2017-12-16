@@ -14,6 +14,10 @@
 		B01233851FCD23BE00B06B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01233831FCD23BE00B06B3A /* LaunchScreen.storyboard */; };
 		B012338D1FCD23D500B06B3A /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012338C1FCD23D500B06B3A /* InitialViewController.swift */; };
 		B01AF5EB1FE3B88400220113 /* FallRiskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01AF5EA1FE3B88400220113 /* FallRiskVC.swift */; };
+		B01AF6321FE534A300220113 /* FallRiskVCFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01AF6311FE534A300220113 /* FallRiskVCFirst.swift */; };
+		B01AF6341FE534BD00220113 /* FallRiskVCSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01AF6331FE534BD00220113 /* FallRiskVCSecond.swift */; };
+		B01AF6361FE534D600220113 /* FallRiskVCThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01AF6351FE534D600220113 /* FallRiskVCThird.swift */; };
+		B01AF6381FE534F400220113 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01AF6371FE534F400220113 /* PageViewController.swift */; };
 		B01D64F61FD81E5A00DCCD13 /* TemperatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01D64F51FD81E5A00DCCD13 /* TemperatureVC.swift */; };
 		B02FAE071FD68561000A6E96 /* BloodPressureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02FAE061FD68561000A6E96 /* BloodPressureVC.swift */; };
 		B03DEBEF1FD18F850043E91C /* UserPreferencesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03DEBEE1FD18F850043E91C /* UserPreferencesVC.swift */; };
@@ -47,6 +51,10 @@
 		B01233861FCD23BE00B06B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B012338C1FCD23D500B06B3A /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		B01AF5EA1FE3B88400220113 /* FallRiskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallRiskVC.swift; sourceTree = "<group>"; };
+		B01AF6311FE534A300220113 /* FallRiskVCFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallRiskVCFirst.swift; sourceTree = "<group>"; };
+		B01AF6331FE534BD00220113 /* FallRiskVCSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallRiskVCSecond.swift; sourceTree = "<group>"; };
+		B01AF6351FE534D600220113 /* FallRiskVCThird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallRiskVCThird.swift; sourceTree = "<group>"; };
+		B01AF6371FE534F400220113 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		B01D64F51FD81E5A00DCCD13 /* TemperatureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureVC.swift; sourceTree = "<group>"; };
 		B02FAE061FD68561000A6E96 /* BloodPressureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureVC.swift; sourceTree = "<group>"; };
 		B03DEBEE1FD18F850043E91C /* UserPreferencesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesVC.swift; sourceTree = "<group>"; };
@@ -135,6 +143,17 @@
 			path = "Carer @ Home";
 			sourceTree = "<group>";
 		};
+		B01AF6301FE5346600220113 /* Fall Risk PageViewing */ = {
+			isa = PBXGroup;
+			children = (
+				B01AF6371FE534F400220113 /* PageViewController.swift */,
+				B01AF6311FE534A300220113 /* FallRiskVCFirst.swift */,
+				B01AF6331FE534BD00220113 /* FallRiskVCSecond.swift */,
+				B01AF6351FE534D600220113 /* FallRiskVCThird.swift */,
+			);
+			path = "Fall Risk PageViewing";
+			sourceTree = "<group>";
+		};
 		B02FAE031FD68261000A6E96 /* Patients */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +188,7 @@
 				B0C5C0261FDAA0F800374E7A /* PainVC.swift */,
 				B07D03DC1FDBFD6A00C81255 /* BloodSugarVC.swift */,
 				B01AF5EA1FE3B88400220113 /* FallRiskVC.swift */,
+				B01AF6301FE5346600220113 /* Fall Risk PageViewing */,
 				B09D234C1FDFAB8000750C74 /* Charts */,
 			);
 			path = "Patient Tests";
@@ -370,8 +390,10 @@
 				B0465AC61FCDBFDC0097FA42 /* RegisterViewController.swift in Sources */,
 				B03DEBF71FD18FFF0043E91C /* ReportsVC.swift in Sources */,
 				B0EEF77E1FCECE5A00CE759A /* HomeVC.swift in Sources */,
+				B01AF6381FE534F400220113 /* PageViewController.swift in Sources */,
 				B03DEBFB1FD190330043E91C /* NewsVC.swift in Sources */,
 				B012338D1FCD23D500B06B3A /* InitialViewController.swift in Sources */,
+				B01AF6361FE534D600220113 /* FallRiskVCThird.swift in Sources */,
 				B071FFC41FD6C2FA00640132 /* FluidIntakeVC.swift in Sources */,
 				B03DEBF51FD18FE20043E91C /* MessagesVC.swift in Sources */,
 				B012337B1FCD23BE00B06B3A /* AppDelegate.swift in Sources */,
@@ -381,6 +403,8 @@
 				B01D64F61FD81E5A00DCCD13 /* TemperatureVC.swift in Sources */,
 				B0BE21681FE2384A00848D30 /* LineChartVC.swift in Sources */,
 				B02FAE071FD68561000A6E96 /* BloodPressureVC.swift in Sources */,
+				B01AF6341FE534BD00220113 /* FallRiskVCSecond.swift in Sources */,
+				B01AF6321FE534A300220113 /* FallRiskVCFirst.swift in Sources */,
 				B03DEBEF1FD18F850043E91C /* UserPreferencesVC.swift in Sources */,
 				B09D234E1FDFABA400750C74 /* BarChartVC.swift in Sources */,
 				B03DEBF11FD18FA80043E91C /* ContactsVC.swift in Sources */,

@@ -127,7 +127,16 @@ class patientDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         case 3:
             performSegue(withIdentifier: "Blood Pressure", sender: self)
         case 4:
-            performSegue(withIdentifier: "Fall Risk", sender: self)
+            //performSegue(withIdentifier: "Fall Risk", sender: self)
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as! PageViewController
+            
+            //vc.lastTempReading = self.temp
+            vc.title = self.vcTitle
+            //self.navigationController?.pushViewController(vc, animated: true)
+            
+            
+            
+            self.present(vc, animated: true, completion: nil)
         case 5:
             performSegue(withIdentifier: "Fluid Intake", sender: self)
         case 6:
