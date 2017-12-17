@@ -9,6 +9,7 @@
 import UIKit
 import ProgressHUD
 
+
 class patientDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var testsData: UITableView!
@@ -18,6 +19,7 @@ class patientDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     var testsImages = ["Patientdetails","Patientreports", "BloodGlucose", "BloodPressure", "FallRisk", "FluidIntake",  "FunctionalScale",  "MentalState",  "PainScale", "Palliative", "Pulse", "RespiratoryRate", "Temperature", "UrineAlbumin", "UrineGlucose", "WoundStatus"]
     var navTitle = ""
     var vcTitle = ""
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +34,14 @@ class patientDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         super.didReceiveMemoryWarning()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.title = vcTitle
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        delegate?.sendNavTitleToFallRisk(navTitle: vcTitle)
+//        //self.title = vcTitle
+//    }
+//    override func viewWillDisappear(_ animated: Bool) {
+//        delegate?.sendNavTitleToFallRisk(navTitle: vcTitle)
+//    }
+    
     /*
     "Patient Details" 0
     "Blood Glucose" 2
@@ -52,6 +59,10 @@ class patientDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     "Urine Glucose" 14
     "Wound Status" 15
     */
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+    }
     // MARK: Prepare for Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -87,7 +98,7 @@ class patientDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
             navigationItem.title = ""
         }
         if segue.identifier == "Fall Risk" {
-            let VC = segue.destination as! FallRiskVC
+            let VC = segue.destination as! PageViewController
             VC.title = "\(navTitle) - \(vcTitle)"
             navigationItem.title = ""
         }
@@ -127,16 +138,13 @@ class patientDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         case 3:
             performSegue(withIdentifier: "Blood Pressure", sender: self)
         case 4:
-            //performSegue(withIdentifier: "Fall Risk", sender: self)
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as! PageViewController
-            
-            //vc.lastTempReading = self.temp
-            vc.title = self.vcTitle
-            //self.navigationController?.pushViewController(vc, animated: true)
-            
-            
-            
-            self.present(vc, animated: true, completion: nil)
+            performSegue(withIdentifier: "Fall Risk", sender: self)
+//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as! PageViewController
+//
+//            //vc.lastTempReading = self.temp
+//            vc.title = self.vcTitle
+//            //self.navigationController?.pushViewController(vc, animated: true)
+//            self.present(vc, animated: true, completion: nil)
         case 5:
             performSegue(withIdentifier: "Fluid Intake", sender: self)
         case 6:

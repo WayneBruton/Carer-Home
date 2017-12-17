@@ -13,7 +13,6 @@
 		B01233821FCD23BE00B06B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01233811FCD23BE00B06B3A /* Assets.xcassets */; };
 		B01233851FCD23BE00B06B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01233831FCD23BE00B06B3A /* LaunchScreen.storyboard */; };
 		B012338D1FCD23D500B06B3A /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012338C1FCD23D500B06B3A /* InitialViewController.swift */; };
-		B01AF5EB1FE3B88400220113 /* FallRiskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01AF5EA1FE3B88400220113 /* FallRiskVC.swift */; };
 		B01AF6321FE534A300220113 /* FallRiskVCFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01AF6311FE534A300220113 /* FallRiskVCFirst.swift */; };
 		B01AF6341FE534BD00220113 /* FallRiskVCSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01AF6331FE534BD00220113 /* FallRiskVCSecond.swift */; };
 		B01AF6361FE534D600220113 /* FallRiskVCThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01AF6351FE534D600220113 /* FallRiskVCThird.swift */; };
@@ -50,7 +49,6 @@
 		B01233841FCD23BE00B06B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B01233861FCD23BE00B06B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B012338C1FCD23D500B06B3A /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
-		B01AF5EA1FE3B88400220113 /* FallRiskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallRiskVC.swift; sourceTree = "<group>"; };
 		B01AF6311FE534A300220113 /* FallRiskVCFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallRiskVCFirst.swift; sourceTree = "<group>"; };
 		B01AF6331FE534BD00220113 /* FallRiskVCSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallRiskVCSecond.swift; sourceTree = "<group>"; };
 		B01AF6351FE534D600220113 /* FallRiskVCThird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallRiskVCThird.swift; sourceTree = "<group>"; };
@@ -78,7 +76,7 @@
 		B0C5C0261FDAA0F800374E7A /* PainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainVC.swift; sourceTree = "<group>"; };
 		B0EEF77D1FCECE5A00CE759A /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		BBCC27988F86FD584FA4942B /* Pods-Carer @ Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carer @ Home.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carer @ Home/Pods-Carer @ Home.debug.xcconfig"; sourceTree = "<group>"; };
-		DA7827E975F137D5C5538965 /* Pods_Carer___Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Carer___Home.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA7827E975F137D5C5538965 /* Pods_Carer___Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carer___Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F794B8970B4E107C6DC5843E /* Pods-Carer @ Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carer @ Home.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carer @ Home/Pods-Carer @ Home.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,7 +185,6 @@
 				B01D64F51FD81E5A00DCCD13 /* TemperatureVC.swift */,
 				B0C5C0261FDAA0F800374E7A /* PainVC.swift */,
 				B07D03DC1FDBFD6A00C81255 /* BloodSugarVC.swift */,
-				B01AF5EA1FE3B88400220113 /* FallRiskVC.swift */,
 				B01AF6301FE5346600220113 /* Fall Risk PageViewing */,
 				B09D234C1FDFAB8000750C74 /* Charts */,
 			);
@@ -356,6 +353,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Carer @ Home/Pods-Carer @ Home-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework",
+				"${BUILT_PRODUCTS_DIR}/ISRadioButton/ISRadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/MARoundButton/MARoundButton.framework",
 				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/RoundedSwitch/RoundedSwitch.framework",
@@ -366,6 +364,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GMStepper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ISRadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MARoundButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RoundedSwitch.framework",
@@ -410,7 +409,6 @@
 				B03DEBF11FD18FA80043E91C /* ContactsVC.swift in Sources */,
 				B07D03DD1FDBFD6A00C81255 /* BloodSugarVC.swift in Sources */,
 				B0864A4B1FD573C7000AEA68 /* patientDetailVC.swift in Sources */,
-				B01AF5EB1FE3B88400220113 /* FallRiskVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
