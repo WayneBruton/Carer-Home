@@ -931,21 +931,13 @@
                                 <rect key="frame" x="0.0" y="192" width="375" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Medications: Includes PCA/Opiates, antconvulsants, anti-hypertensives, diuretics, hypnotics, sedatives and psychotropics" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7y-OC-QVK">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="66"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Medications" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7y-OC-QVK">
+                                        <rect key="frame" x="8" y="0.0" width="104" height="35.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efn-wx-bOI">
-                                        <rect key="frame" x="28" y="129" width="247" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title=" 2 or more high fall risk drugs" image="checkbox-unchecked">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ja-p9-Kst">
                                         <rect key="frame" x="28" y="171" width="335" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -953,14 +945,42 @@
                                         <state key="normal" title=" Sedated procedure within past 24 hours" image="checkbox-unchecked">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sedatedProcedureWithin24HoursButtonTapped:" destination="ysF-6H-UkD" eventType="touchUpInside" id="zyb-5U-7XP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYd-Ft-bk0">
-                                        <rect key="frame" x="28" y="84" width="165" height="24"/>
+                                        <rect key="frame" x="23" y="86" width="165" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title=" 1 high fall risk drug" image="checkbox-unchecked">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="oneHighFallRiskDrugButtonTapped:" destination="ysF-6H-UkD" eventType="touchUpInside" id="qPI-qR-et1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fa2-oS-IfA">
+                                        <rect key="frame" x="23" y="43" width="174" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="No high fall risk drug" image="checkbox-unchecked">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="noHighFallRiskDrugButtonTapped:" destination="ysF-6H-UkD" eventType="touchUpInside" id="Unt-93-TEQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efn-wx-bOI">
+                                        <rect key="frame" x="28" y="128" width="247" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title=" 2 or more high fall risk drugs" image="checkbox-unchecked">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="twoOrMoreHighFallRiskDrugButtonTapped:" destination="ysF-6H-UkD" eventType="touchUpInside" id="eFD-Gs-xC4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -969,33 +989,52 @@
                                 <rect key="frame" x="0.0" y="406" width="375" height="217"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Patient Care Equipment:  Any Equipment that tethers the patient (e.g. IV Infusion, chest Tube, indwelling catheter, SCD's etc)" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcC-bW-6AL">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Patient Care Equipment:  Any Equipment that tethers the patient" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcC-bW-6AL">
+                                        <rect key="frame" x="8" y="0.0" width="340.5" height="54.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6px-uc-BBD">
-                                        <rect key="frame" x="24" y="88" width="99" height="24"/>
+                                        <rect key="frame" x="220" y="62" width="99" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="1 present" image="checkbox-unchecked">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="oneEquipmentPresentButtonTapped:" destination="ysF-6H-UkD" eventType="touchUpInside" id="Cy0-jU-0L6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUS-m5-Fri">
+                                        <rect key="frame" x="28" y="62" width="99" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="None" image="checkbox-unchecked">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="noEquipmentPresentButtonTapped:" destination="ysF-6H-UkD" eventType="touchUpInside" id="y6h-7E-Zn5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWo-Qf-5Ac">
-                                        <rect key="frame" x="232" y="88" width="102" height="24"/>
+                                        <rect key="frame" x="47" y="132" width="102" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="2 present" image="checkbox-unchecked">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="twoEquipmentPresentButtonTapped:" destination="ysF-6H-UkD" eventType="touchUpInside" id="hh1-6g-YuB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cwa-co-Gd6">
-                                        <rect key="frame" x="24" y="147" width="169" height="24"/>
+                                        <rect key="frame" x="206" y="132" width="169" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="3 or more present" image="checkbox-unchecked">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="threeEquipmentPresentButtonTapped:" destination="ysF-6H-UkD" eventType="touchUpInside" id="REg-AG-984"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1010,8 +1049,16 @@
                         <viewLayoutGuide key="safeArea" id="9aS-RN-2I1"/>
                     </view>
                     <connections>
+                        <outlet property="noEquipmentPresentButton" destination="GUS-m5-Fri" id="u11-GD-HnF"/>
+                        <outlet property="noHighFallRiskDrugButton" destination="fa2-oS-IfA" id="3MQ-rF-jL4"/>
+                        <outlet property="oneEquipmentPresentButton" destination="6px-uc-BBD" id="Wr0-vY-QqV"/>
+                        <outlet property="oneHighFallRiskDrugButton" destination="KYd-Ft-bk0" id="26m-Kh-VZI"/>
                         <outlet property="scoreDescriptionLabel" destination="4R2-1v-X3V" id="vvP-MR-khF"/>
                         <outlet property="scoreLabel" destination="vbb-Ks-nRP" id="Kq6-94-4PC"/>
+                        <outlet property="sedatedProcedureWithin24HoursButton" destination="7Ja-p9-Kst" id="oRo-BO-NVz"/>
+                        <outlet property="threeEquipmentPresentButton" destination="Cwa-co-Gd6" id="4ux-Cg-tag"/>
+                        <outlet property="twoEquipmentPresentButton" destination="cWo-Qf-5Ac" id="9r3-Hr-HsS"/>
+                        <outlet property="twoOrMoreHighFallRiskDrugButton" destination="efn-wx-bOI" id="GOv-A8-lez"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coM-S5-3z6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1025,13 +1072,181 @@
                     <view key="view" contentMode="scaleToFill" id="P5A-1K-hag">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zs1-ok-hDB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mrq-3t-6pB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eI-zR-hUy">
+                                        <rect key="frame" x="282" y="28" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ad8-Ky-nnJ">
+                                        <rect key="frame" x="8" y="81" width="359" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13b-Tg-vB4">
+                                        <rect key="frame" x="23" y="18" width="54" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nPu-8U-fDO">
+                                <rect key="frame" x="0.0" y="192" width="375" height="197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mobilty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5y-UR-yA9">
+                                        <rect key="frame" x="21" y="17" width="69" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="po3-C2-8ME">
+                                        <rect key="frame" x="136" y="17" width="95" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="No issues" image="checkbox-unchecked">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mobilityNoIssuesButtonTapped:" destination="99m-q7-aqC" eventType="touchUpInside" id="3ZL-6a-eyK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah9-O0-EPZ">
+                                        <rect key="frame" x="136" y="153" width="207" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Visual / audio impairment" image="checkbox-unchecked">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mobityVisualAudioButtonTapped:" destination="99m-q7-aqC" eventType="touchUpInside" id="4Sn-Vk-7zP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P68-np-JXS">
+                                        <rect key="frame" x="136" y="62" width="169" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Requires assistance" image="checkbox-unchecked">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mobilityRequiresAssistanceButtonTapped:" destination="99m-q7-aqC" eventType="touchUpInside" id="k5P-5b-mcc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8R7-5S-QJ9">
+                                        <rect key="frame" x="136" y="107" width="125" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Unsteady gait" image="checkbox-unchecked">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mobityUnsteadyGaitButtonTapped:" destination="99m-q7-aqC" eventType="touchUpInside" id="Fpl-c5-hKS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7WN-IZ-L5j">
+                                <rect key="frame" x="0.0" y="620" width="375" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8aL-DR-6bd">
+                                <rect key="frame" x="0.0" y="389" width="375" height="231"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZw-tF-Xk1">
+                                        <rect key="frame" x="8" y="130" width="101" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Impulsive" image="checkbox-unchecked">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cognitionImpulsiveButtonTapped:" destination="99m-q7-aqC" eventType="touchUpInside" id="jsc-Ku-jpo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pR-5h-0CQ">
+                                        <rect key="frame" x="202" y="21" width="103" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="No issues" image="checkbox-unchecked">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cognitionNoIssuesButtonTapped:" destination="99m-q7-aqC" eventType="touchUpInside" id="c2b-hg-Krv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKM-10-tgv">
+                                        <rect key="frame" x="15" y="175" width="344" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Understanding of physical/cognitive limitations" image="checkbox-unchecked">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cognitionAwarenessPhysicalOrCognitiveAbilitiesButtonTapped:" destination="99m-q7-aqC" eventType="touchUpInside" id="l4l-Zx-fiN"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cognition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HJ-w5-fhg">
+                                        <rect key="frame" x="15" y="23" width="90" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2f-ng-a27">
+                                        <rect key="frame" x="15" y="85" width="271" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Altered awareness of environment" image="checkbox-unchecked">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cognitionAlteredAwarenessButtonTapped:" destination="99m-q7-aqC" eventType="touchUpInside" id="VPI-zA-ygE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="IYZ-Gj-y5j"/>
                     </view>
+                    <connections>
+                        <outlet property="cognitionAlteredAwarenessButton" destination="n2f-ng-a27" id="Afe-vJ-27k"/>
+                        <outlet property="cognitionAwarenessPhysicalOrCognitiveAbilitiesButton" destination="ZKM-10-tgv" id="5e1-Qo-yHl"/>
+                        <outlet property="cognitionImpulsiveButton" destination="nZw-tF-Xk1" id="3Mb-YK-zxK"/>
+                        <outlet property="cognitionNoIssuesButton" destination="0pR-5h-0CQ" id="cp6-T5-kgv"/>
+                        <outlet property="mobilityNoIssuesButton" destination="po3-C2-8ME" id="dJ0-cz-Tso"/>
+                        <outlet property="mobilityRequiresAssistanceButton" destination="P68-np-JXS" id="vTD-vl-0Wc"/>
+                        <outlet property="mobityUnsteadyGaitButton" destination="8R7-5S-QJ9" id="bTs-aR-HoT"/>
+                        <outlet property="mobityVisualAudioButton" destination="Ah9-O0-EPZ" id="LVS-va-4vL"/>
+                        <outlet property="scoreDescriptionLabel" destination="Ad8-Ky-nnJ" id="7aY-ih-Pxq"/>
+                        <outlet property="scoreLabel" destination="7eI-zR-hUy" id="qU6-hD-gcU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7Y-SK-gR2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6692" y="4690"/>
+            <point key="canvasLocation" x="6768.8000000000002" y="4396.5517241379312"/>
         </scene>
         <!--Fall RiskVC First-->
         <scene sceneID="fIU-cX-lFX">
@@ -1041,158 +1256,226 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYG-WU-OY9" userLabel="Score Container">
-                                <rect key="frame" x="0.0" y="64" width="375" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FwY-qZ-DpK" userLabel="Main Container">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8x-TH-zzj">
-                                        <rect key="frame" x="31" y="28" width="54" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGU-Uw-OiQ">
-                                        <rect key="frame" x="282" y="28" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0j5-u5-fUS">
-                                        <rect key="frame" x="8" y="81" width="359" height="39"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="suz-hf-zC0" userLabel="Fall History Container">
+                                        <rect key="frame" x="0.0" y="336" width="375" height="144"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fall History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMY-IF-b6c">
+                                                <rect key="frame" x="8" y="8" width="97" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYr-ff-fC2">
+                                                <rect key="frame" x="28" y="60" width="276" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title=" 1 or more falls within 6 months" image="checkbox-unchecked">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="fallHistoryButtonTapped:" destination="GZ0-2f-TIK" eventType="touchUpInside" id="0DT-Xg-tdx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="375" id="E3h-Xo-rY6"/>
+                                            <constraint firstAttribute="height" constant="144" id="mcn-WB-G4y"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1p-iI-Q5e" userLabel="Bowel Container">
+                                        <rect key="frame" x="0.0" y="480" width="375" height="144"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bS-mq-jKI">
+                                                <rect key="frame" x="146" y="47" width="128" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Incontinence" image="checkbox-unchecked">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="incontinenceButtonTapped:" destination="GZ0-2f-TIK" eventType="touchUpInside" id="nzu-Kh-Z5y"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boe-VV-Icz">
+                                                <rect key="frame" x="146" y="100" width="204" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Urgency or Frequency" image="checkbox-unchecked">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="urgencyOrFrequencyButtonTapped:" destination="GZ0-2f-TIK" eventType="touchUpInside" id="K7v-v8-ebS"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Elimination, Bowel &amp; Urine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcL-41-pN7">
+                                                <rect key="frame" x="8" y="8" width="227" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="144" id="H2J-oE-zQv"/>
+                                            <constraint firstAttribute="width" constant="375" id="fd3-7V-75Z"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndz-I9-QiD" userLabel="Age Container">
+                                        <rect key="frame" x="0.0" y="192" width="375" height="144"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age - Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHY-uU-Fxe">
+                                                <rect key="frame" x="8" y="8" width="101" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Xxi-ks-Qrq"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="101" id="jDy-I5-iFR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rg3-YQ-1x5">
+                                                <rect key="frame" x="200" y="100" width="140" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title=" &gt; = 80" image="checkbox-unchecked">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="age80AndMoreButtonTapped:" destination="GZ0-2f-TIK" eventType="touchUpInside" id="k5w-YO-VoS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJ6-5a-ASf">
+                                                <rect key="frame" x="200" y="52" width="140" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title=" 60 - 69" image="checkbox-unchecked">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="age60To69ButtonTapped:" destination="GZ0-2f-TIK" eventType="touchUpInside" id="R6c-Hs-z2a"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7z-U2-FrI">
+                                                <rect key="frame" x="60" y="52" width="140" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title=" &lt; 60" image="checkbox-unchecked">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="ageLess60ButtonTapped:" destination="GZ0-2f-TIK" eventType="touchUpInside" id="uwb-Mm-894"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2Z-cH-HGG">
+                                                <rect key="frame" x="60" y="100" width="140" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title=" 70 - 79" image="checkbox-unchecked">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="age70To79ButtonTapped:" destination="GZ0-2f-TIK" eventType="touchUpInside" id="9qs-Mi-ppJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="375" id="bZh-Cy-cqw"/>
+                                            <constraint firstItem="rHY-uU-Fxe" firstAttribute="top" secondItem="ndz-I9-QiD" secondAttribute="top" constant="8" id="ceJ-0h-2xa"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rHY-uU-Fxe" secondAttribute="trailing" constant="20" symbolic="YES" id="pdo-l3-Vuv"/>
+                                            <constraint firstItem="rHY-uU-Fxe" firstAttribute="leading" secondItem="ndz-I9-QiD" secondAttribute="leading" constant="8" id="rqC-Vd-H8A"/>
+                                            <constraint firstAttribute="height" constant="144" id="wfg-XW-ZI3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rXj-aC-Zhu" userLabel="Bottom Container">
+                                        <rect key="frame" x="0.0" y="624" width="375" height="43"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="Do4-7q-wyW"/>
+                                            <constraint firstAttribute="width" constant="375" id="ytt-2A-JD8"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0FK-er-hTQ" userLabel="Top Container">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="UwB-EM-Jyh"/>
+                                            <constraint firstAttribute="width" constant="375" id="wRu-xM-qGg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYG-WU-OY9" userLabel="Score Container">
+                                        <rect key="frame" x="0.0" y="64" width="375" height="128"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8x-TH-zzj">
+                                                <rect key="frame" x="31" y="28" width="54" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGU-Uw-OiQ">
+                                                <rect key="frame" x="282" y="28" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0j5-u5-fUS">
+                                                <rect key="frame" x="8" y="81" width="359" height="39"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="UC4-XO-QTj"/>
+                                            <constraint firstAttribute="width" constant="375" id="h9U-u3-HvW"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0FK-er-hTQ" userLabel="Top Container">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rXj-aC-Zhu" userLabel="Bottom Container">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndz-I9-QiD" userLabel="Age Container">
-                                <rect key="frame" x="0.0" y="192" width="375" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rg3-YQ-1x5">
-                                        <rect key="frame" x="243" y="92" width="83" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title=" &gt; = 80" image="checkbox-unchecked">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="age80AndMoreButtonTapped:" destination="GZ0-2f-TIK" eventType="touchUpInside" id="k5w-YO-VoS"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJ6-5a-ASf">
-                                        <rect key="frame" x="243" y="40" width="91" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title=" 60 - 69" image="checkbox-unchecked">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="age60To69ButtonTapped:" destination="GZ0-2f-TIK" eventType="touchUpInside" id="R6c-Hs-z2a"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7z-U2-FrI">
-                                        <rect key="frame" x="28" y="40" width="67" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title=" &lt; 60" image="checkbox-unchecked">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="ageLess60ButtonTapped:" destination="GZ0-2f-TIK" eventType="touchUpInside" id="uwb-Mm-894"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age - Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHY-uU-Fxe">
-                                        <rect key="frame" x="8" y="8" width="101" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2Z-cH-HGG">
-                                        <rect key="frame" x="28" y="92" width="88" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title=" 70 - 79" image="checkbox-unchecked">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="age70To79ButtonTapped:" destination="GZ0-2f-TIK" eventType="touchUpInside" id="9qs-Mi-ppJ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u1p-iI-Q5e" userLabel="Bowel Container">
-                                <rect key="frame" x="0.0" y="479" width="375" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bS-mq-jKI">
-                                        <rect key="frame" x="146" y="47" width="128" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Incontinence" image="checkbox-unchecked">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="incontinenceButtonTapped:" destination="GZ0-2f-TIK" eventType="touchUpInside" id="nzu-Kh-Z5y"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boe-VV-Icz">
-                                        <rect key="frame" x="146" y="100" width="204" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Urgency or Frequency" image="checkbox-unchecked">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="urgencyOrFrequencyButtonTapped:" destination="GZ0-2f-TIK" eventType="touchUpInside" id="K7v-v8-ebS"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Elimination, Bowel &amp; Urine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcL-41-pN7">
-                                        <rect key="frame" x="8" y="8" width="227" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="suz-hf-zC0" userLabel="Fall History Container">
-                                <rect key="frame" x="0.0" y="336" width="375" height="143"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fall History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMY-IF-b6c">
-                                        <rect key="frame" x="8" y="8" width="97" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYr-ff-fC2">
-                                        <rect key="frame" x="28" y="60" width="276" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title=" 1 or more falls within 6 months" image="checkbox-unchecked">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="fallHistoryButtonTapped:" destination="GZ0-2f-TIK" eventType="touchUpInside" id="0DT-Xg-tdx"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="suz-hf-zC0" secondAttribute="trailing" id="15E-fA-Lnr"/>
+                                    <constraint firstItem="uYG-WU-OY9" firstAttribute="leading" secondItem="FwY-qZ-DpK" secondAttribute="leading" id="2bz-z2-yoW"/>
+                                    <constraint firstItem="suz-hf-zC0" firstAttribute="top" secondItem="ndz-I9-QiD" secondAttribute="bottom" id="644-B3-DHP"/>
+                                    <constraint firstItem="u1p-iI-Q5e" firstAttribute="height" secondItem="ndz-I9-QiD" secondAttribute="height" id="6Hx-Hq-Wso"/>
+                                    <constraint firstItem="0FK-er-hTQ" firstAttribute="leading" secondItem="FwY-qZ-DpK" secondAttribute="leading" id="7eb-sj-F6m"/>
+                                    <constraint firstItem="u1p-iI-Q5e" firstAttribute="leading" secondItem="FwY-qZ-DpK" secondAttribute="leading" id="8ee-rp-n2V"/>
+                                    <constraint firstItem="uYG-WU-OY9" firstAttribute="top" secondItem="0FK-er-hTQ" secondAttribute="bottom" id="8vm-Bi-IlH"/>
+                                    <constraint firstItem="rXj-aC-Zhu" firstAttribute="leading" secondItem="FwY-qZ-DpK" secondAttribute="leading" id="9KF-SS-BHH"/>
+                                    <constraint firstItem="ndz-I9-QiD" firstAttribute="top" secondItem="uYG-WU-OY9" secondAttribute="bottom" id="Cnq-ff-jy5"/>
+                                    <constraint firstItem="u1p-iI-Q5e" firstAttribute="top" secondItem="suz-hf-zC0" secondAttribute="bottom" id="D3o-xD-ME6"/>
+                                    <constraint firstAttribute="trailing" secondItem="uYG-WU-OY9" secondAttribute="trailing" id="EU7-5v-x9v"/>
+                                    <constraint firstAttribute="trailing" secondItem="ndz-I9-QiD" secondAttribute="trailing" id="GFR-EG-VnA"/>
+                                    <constraint firstAttribute="trailing" secondItem="u1p-iI-Q5e" secondAttribute="trailing" id="HdE-Jc-4Ho"/>
+                                    <constraint firstItem="0FK-er-hTQ" firstAttribute="top" secondItem="FwY-qZ-DpK" secondAttribute="top" id="Kau-af-qQY"/>
+                                    <constraint firstAttribute="trailing" secondItem="0FK-er-hTQ" secondAttribute="trailing" id="Lt0-4q-ImD"/>
+                                    <constraint firstAttribute="height" constant="667" id="McD-CO-kKh"/>
+                                    <constraint firstItem="ndz-I9-QiD" firstAttribute="top" secondItem="uYG-WU-OY9" secondAttribute="bottom" id="NGY-Us-Dme"/>
+                                    <constraint firstItem="u1p-iI-Q5e" firstAttribute="width" secondItem="ndz-I9-QiD" secondAttribute="width" id="OaN-jf-128"/>
+                                    <constraint firstItem="suz-hf-zC0" firstAttribute="leading" secondItem="FwY-qZ-DpK" secondAttribute="leading" id="U1b-tz-iOc"/>
+                                    <constraint firstAttribute="bottom" secondItem="rXj-aC-Zhu" secondAttribute="bottom" id="UqN-d9-jPE"/>
+                                    <constraint firstItem="suz-hf-zC0" firstAttribute="height" secondItem="ndz-I9-QiD" secondAttribute="height" id="dM8-Cv-Szd"/>
+                                    <constraint firstAttribute="width" constant="375" id="egy-4Q-gDP"/>
+                                    <constraint firstItem="u1p-iI-Q5e" firstAttribute="top" secondItem="suz-hf-zC0" secondAttribute="bottom" id="gWH-vG-R7U"/>
+                                    <constraint firstItem="ndz-I9-QiD" firstAttribute="leading" secondItem="FwY-qZ-DpK" secondAttribute="leading" id="kcx-j3-RFD"/>
+                                    <constraint firstItem="rXj-aC-Zhu" firstAttribute="top" secondItem="u1p-iI-Q5e" secondAttribute="bottom" id="nEy-wv-r4D"/>
+                                    <constraint firstItem="suz-hf-zC0" firstAttribute="top" secondItem="ndz-I9-QiD" secondAttribute="bottom" id="ngp-Ht-dZb"/>
+                                    <constraint firstItem="uYG-WU-OY9" firstAttribute="top" secondItem="0FK-er-hTQ" secondAttribute="bottom" id="qvX-jX-rdG"/>
+                                    <constraint firstAttribute="trailing" secondItem="rXj-aC-Zhu" secondAttribute="trailing" id="v02-1A-U7K"/>
+                                    <constraint firstItem="rXj-aC-Zhu" firstAttribute="top" secondItem="u1p-iI-Q5e" secondAttribute="bottom" id="wGL-wg-Wih"/>
+                                    <constraint firstItem="suz-hf-zC0" firstAttribute="width" secondItem="ndz-I9-QiD" secondAttribute="width" id="zqD-6G-sbM"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FwY-qZ-DpK" firstAttribute="bottom" secondItem="e1x-ze-Kxg" secondAttribute="bottom" id="6v5-Dq-YCf"/>
+                            <constraint firstItem="FwY-qZ-DpK" firstAttribute="trailing" secondItem="e1x-ze-Kxg" secondAttribute="trailing" id="Rs4-Vg-N5M"/>
+                            <constraint firstItem="FwY-qZ-DpK" firstAttribute="leading" secondItem="e1x-ze-Kxg" secondAttribute="leading" id="UoJ-jy-uDG"/>
+                            <constraint firstItem="FwY-qZ-DpK" firstAttribute="top" secondItem="P3o-XP-gst" secondAttribute="top" id="mga-YK-79n"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="e1x-ze-Kxg"/>
                     </view>
                     <connections>

@@ -35,6 +35,7 @@
 		B0864A4B1FD573C7000AEA68 /* patientDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0864A4A1FD573C7000AEA68 /* patientDetailVC.swift */; };
 		B09D234E1FDFABA400750C74 /* BarChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D234D1FDFABA400750C74 /* BarChartVC.swift */; };
 		B0A65D2E1FDA8D4D0046AEA6 /* keyboard_tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B0A65D2D1FDA8D4D0046AEA6 /* keyboard_tap.mp3 */; };
+		B0BCDF831FE91C4800D12220 /* ChangeButtonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCDF821FE91C4800D12220 /* ChangeButtonImage.swift */; };
 		B0BDEA431FDD0734006D0C65 /* ClickSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDEA421FDD0734006D0C65 /* ClickSound.swift */; };
 		B0BE21681FE2384A00848D30 /* LineChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE21671FE2384A00848D30 /* LineChartVC.swift */; };
 		B0C5C0271FDAA0F800374E7A /* PainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C5C0261FDAA0F800374E7A /* PainVC.swift */; };
@@ -71,6 +72,7 @@
 		B0864A4A1FD573C7000AEA68 /* patientDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientDetailVC.swift; sourceTree = "<group>"; };
 		B09D234D1FDFABA400750C74 /* BarChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartVC.swift; sourceTree = "<group>"; };
 		B0A65D2D1FDA8D4D0046AEA6 /* keyboard_tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = keyboard_tap.mp3; sourceTree = "<group>"; };
+		B0BCDF821FE91C4800D12220 /* ChangeButtonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeButtonImage.swift; sourceTree = "<group>"; };
 		B0BDEA421FDD0734006D0C65 /* ClickSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickSound.swift; sourceTree = "<group>"; };
 		B0BE21671FE2384A00848D30 /* LineChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartVC.swift; sourceTree = "<group>"; };
 		B0C5C0261FDAA0F800374E7A /* PainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainVC.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			children = (
 				B081D5D41FD283D10089A5FE /* Conversions.swift */,
 				B0BDEA421FDD0734006D0C65 /* ClickSound.swift */,
+				B0BCDF821FE91C4800D12220 /* ChangeButtonImage.swift */,
 			);
 			path = "Supportive Files";
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				B03DEBF91FD1901A0043E91C /* FeedbackVC.swift in Sources */,
 				B0BDEA431FDD0734006D0C65 /* ClickSound.swift in Sources */,
 				B0465AC61FCDBFDC0097FA42 /* RegisterViewController.swift in Sources */,
+				B0BCDF831FE91C4800D12220 /* ChangeButtonImage.swift in Sources */,
 				B03DEBF71FD18FFF0043E91C /* ReportsVC.swift in Sources */,
 				B0EEF77E1FCECE5A00CE759A /* HomeVC.swift in Sources */,
 				B01AF6381FE534F400220113 /* PageViewController.swift in Sources */,

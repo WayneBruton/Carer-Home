@@ -11,6 +11,8 @@ import ProgressHUD
 
 class FallRiskVCFirst: UIViewController  {
     
+    //MARK: IB Outlets
+    
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var ageLess60Button: UIButton!
     @IBOutlet weak var age60To69Button: UIButton!
@@ -20,6 +22,8 @@ class FallRiskVCFirst: UIViewController  {
     @IBOutlet weak var scoreDescriptionLabel: UILabel!
     @IBOutlet weak var incontinenceButton: UIButton!
     @IBOutlet weak var UrgencyOrFrequencyButton: UIButton!
+    
+    //MARK: Variances & Constants
     
     var age = 0
     var fallHistory = 0
@@ -32,6 +36,7 @@ class FallRiskVCFirst: UIViewController  {
     var incontinence = 0 //Relates to Bowel
     var urgencyOrFrequency = 0 // Relates to Bowel
     
+    var requiresAssistance = 0 // Relates to Mobility
     var unsteadyGait = 0 //Relates to Mobility
     var impairmentMobility = 0 //Relates to Mobility
     
@@ -40,10 +45,15 @@ class FallRiskVCFirst: UIViewController  {
     var lackOfUnderstandingOfOnesLimitations = 0 // Relates to Cognition
     
     let userDefaults = UserDefaults.standard
+    let image = UIImage(named: "checkbox-unchecked.png")
+    let imageChecked = UIImage(named: "checkbox-checked.png")
     
+    //MARK: ViewDidLoad Etc
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ageLess60Button.contentHorizontalAlignment = .left
+        age70To79Button.contentHorizontalAlignment = .left
         saveScores()
         calculateScore()
     }
@@ -53,23 +63,13 @@ class FallRiskVCFirst: UIViewController  {
         super.didReceiveMemoryWarning()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-      
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-       
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         retrieveScores()
         calculateScore()
     }
- 
+    
+    //MARK: IB Actions
+    
     @IBAction func ageLess60ButtonTapped(_ sender: UIButton) {
         age = 0
         ageButtonImages()
@@ -106,6 +106,50 @@ class FallRiskVCFirst: UIViewController  {
         calculateScore()
     }
     
+    @IBAction func fallHistoryButtonTapped(_ sender: UIButton) {
+        changeImage(sender: sender)
+        if sender.currentImage == imageChecked {
+            fallHistory = 5
+        } else {
+            fallHistory = 0
+        }
+        saveScores()
+        calculateScore()
+    }
+    
+    @IBAction func incontinenceButtonTapped(_ sender: UIButton) {
+        changeImage(sender: sender)
+        if sender.currentImage == imageChecked {
+            incontinence = 2
+        } else {
+            incontinence = 0
+        }
+        saveScores()
+        calculateScore()
+        
+    }
+    
+    @IBAction func urgencyOrFrequencyButtonTapped(_ sender: UIButton) {
+        changeImage(sender: sender)
+        if sender.currentImage == imageChecked {
+            urgencyOrFrequency = 2
+        } else {
+            urgencyOrFrequency = 0
+        }
+        saveScores()
+        calculateScore()
+    }
+    
+    //MARK: Functions
+    
+    func changeImage(sender: UIButton) {
+        if sender.currentImage == image {
+            sender.setImage(imageChecked, for: .normal)
+        } else {
+            sender.setImage(image, for: .normal)
+        }
+    }
+    
     func ageButtonImages() {
         let image = UIImage(named: "checkbox-unchecked.png")
         ageLess60Button.setImage(image, for: .normal)
@@ -122,6 +166,7 @@ class FallRiskVCFirst: UIViewController  {
         userDefaults.set(patientCareEquipment, forKey: "patientCareEquipment")
         userDefaults.set(incontinence, forKey: "incontinence")
         userDefaults.set(urgencyOrFrequency, forKey: "urgencyOrFrequency")
+        userDefaults.set(requiresAssistance, forKey: "requiresAssistance")//*****
         userDefaults.set(unsteadyGait, forKey: "unsteadyGait")
         userDefaults.set(impairmentMobility, forKey: "impairmentMobility")
         userDefaults.set(alteredAwareness, forKey: "alteredAwareness")
@@ -147,6 +192,10 @@ class FallRiskVCFirst: UIViewController  {
         if userDefaults.integer(forKey: "urgencyOrFrequency") != 0 {
             urgencyOrFrequency = userDefaults.integer(forKey: "urgencyOrFrequency")
         }
+        if userDefaults.integer(forKey: "requiresAssistance") != 0 {
+            requiresAssistance = userDefaults.integer(forKey: "requiresAssistance")
+        }
+        
         if userDefaults.integer(forKey: "unsteadyGait") != 0 {
             unsteadyGait = userDefaults.integer(forKey: "unsteadyGait")
         }
@@ -166,7 +215,7 @@ class FallRiskVCFirst: UIViewController  {
     
     func calculateScore() {
         bowel = incontinence + urgencyOrFrequency
-        mobility = unsteadyGait + impairmentMobility
+        mobility = requiresAssistance + unsteadyGait + impairmentMobility
         cognition = alteredAwareness + impulsive + lackOfUnderstandingOfOnesLimitations
         let score = age + fallHistory + bowel + medication + patientCareEquipment + mobility + cognition
         scoreLabel.text = "\(score)"
@@ -178,49 +227,4 @@ class FallRiskVCFirst: UIViewController  {
             scoreDescriptionLabel.text = "High Fall Risk"
         }
     }
-    
-    @IBAction func fallHistoryButtonTapped(_ sender: UIButton) {
-        let image = UIImage(named: "checkbox-unchecked.png")
-        let imageChecked = UIImage(named: "checkbox-checked.png")
-        if fallHistoryButton.image(for: .normal) == UIImage(named: "checkbox-unchecked.png") {
-            fallHistory = 5
-            fallHistoryButton.setImage(imageChecked, for: .normal)
-        } else {
-            fallHistory = 0
-            fallHistoryButton.setImage(image, for: .normal)
-        }
-        saveScores()
-        calculateScore()
-    }
-    
-    @IBAction func incontinenceButtonTapped(_ sender: UIButton) {
-        let image = UIImage(named: "checkbox-unchecked.png")
-        let imageChecked = UIImage(named: "checkbox-checked.png")
-        if incontinenceButton.image(for: .normal) == UIImage(named: "checkbox-unchecked.png") {
-            incontinence = 2
-            incontinenceButton.setImage(imageChecked, for: .normal)
-        } else {
-            incontinence = 0
-            incontinenceButton.setImage(image, for: .normal)
-        }
-        saveScores()
-        calculateScore()
-        
-    }
-    
-    @IBAction func urgencyOrFrequencyButtonTapped(_ sender: UIButton) {
-        let image = UIImage(named: "checkbox-unchecked.png")
-        let imageChecked = UIImage(named: "checkbox-checked.png")
-        if UrgencyOrFrequencyButton.image(for: .normal) == UIImage(named: "checkbox-unchecked.png") {
-            urgencyOrFrequency = 2
-            UrgencyOrFrequencyButton.setImage(imageChecked, for: .normal)
-        } else {
-            urgencyOrFrequency = 0
-            UrgencyOrFrequencyButton.setImage(image, for: .normal)
-        }
-        saveScores()
-        calculateScore()
-    }
-    
-    
 }
