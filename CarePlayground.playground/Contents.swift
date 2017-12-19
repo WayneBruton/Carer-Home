@@ -44,6 +44,23 @@ Wht are you up to?
 
 print(newWrapString)
 
+class TestData {
+    var age : Int!
+}
+
+
+var age = 10
+
+print(age)
+
+var testing : TestData?
+
+testing?.age = age
+
+print(testing?.age ?? <#default value#>)
+
+
+
 
 
 

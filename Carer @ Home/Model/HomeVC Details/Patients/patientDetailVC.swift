@@ -14,7 +14,7 @@ class patientDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     @IBOutlet weak var testsData: UITableView!
     
-    var tests = ["Patient Details","Reports", "Blood Glucose", "Blood Pressure", "Fall Risk Scale", "Fluid Intake", "Funcional Scale (Fim)", "Mental State", "Pain Scale",  "Palliative Care - ECOG Scale", "Pulse",  "Respiratory Rate","Temperature",   "Urine Albumin", "Urine Glucose", "Wound Status"]
+    var tests = ["Patient Details","Reports", "Blood Glucose", "Blood Pressure", "Fall Risk Scale", "Fluid Intake", "Functional Scale (Fim)", "Mental State", "Pain Scale",  "Palliative Care - ECOG Scale", "Pulse",  "Respiratory Rate","Temperature",   "Urine Albumin", "Urine Glucose", "Wound Status"]
     
     var testsImages = ["Patientdetails","Patientreports", "BloodGlucose", "BloodPressure", "FallRisk", "FluidIntake",  "FunctionalScale",  "MentalState",  "PainScale", "Palliative", "Pulse", "RespiratoryRate", "Temperature", "UrineAlbumin", "UrineGlucose", "WoundStatus"]
     var navTitle = ""

@@ -76,7 +76,7 @@
 		B0C5C0261FDAA0F800374E7A /* PainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainVC.swift; sourceTree = "<group>"; };
 		B0EEF77D1FCECE5A00CE759A /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		BBCC27988F86FD584FA4942B /* Pods-Carer @ Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carer @ Home.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carer @ Home/Pods-Carer @ Home.debug.xcconfig"; sourceTree = "<group>"; };
-		DA7827E975F137D5C5538965 /* Pods_Carer___Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carer___Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA7827E975F137D5C5538965 /* Pods_Carer___Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Carer___Home.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F794B8970B4E107C6DC5843E /* Pods-Carer @ Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carer @ Home.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carer @ Home/Pods-Carer @ Home.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -353,7 +353,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Carer @ Home/Pods-Carer @ Home-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework",
-				"${BUILT_PRODUCTS_DIR}/ISRadioButton/ISRadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/MARoundButton/MARoundButton.framework",
 				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/RoundedSwitch/RoundedSwitch.framework",
@@ -364,7 +363,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GMStepper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ISRadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MARoundButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RoundedSwitch.framework",
