@@ -1289,16 +1289,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1p-iI-Q5e" userLabel="Bowel Container">
                                         <rect key="frame" x="0.0" y="480" width="375" height="144"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bS-mq-jKI">
-                                                <rect key="frame" x="146" y="47" width="128" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Incontinence" image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="incontinenceButtonTapped:" destination="GZ0-2f-TIK" eventType="touchUpInside" id="nzu-Kh-Z5y"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boe-VV-Icz">
                                                 <rect key="frame" x="146" y="100" width="204" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1316,6 +1306,16 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bS-mq-jKI">
+                                                <rect key="frame" x="136" y="47" width="128" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Incontinence" image="checkbox-unchecked">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="incontinenceButtonTapped:" destination="GZ0-2f-TIK" eventType="touchUpInside" id="nzu-Kh-Z5y"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
