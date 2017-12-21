@@ -48,12 +48,17 @@ class FallRiskVCFirst: UIViewController  {
     let image = UIImage(named: "checkbox-unchecked.png")
     let imageChecked = UIImage(named: "checkbox-checked.png")
     
+    var calcFR = CalculateFallRiskScores()
     //MARK: ViewDidLoad Etc
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ageLess60Button.contentHorizontalAlignment = .left
         age70To79Button.contentHorizontalAlignment = .left
+        age60To69Button.contentHorizontalAlignment = .left
+        age80AndMoreButton.contentHorizontalAlignment = .left
+        incontinenceButton.contentHorizontalAlignment = .left
+        UrgencyOrFrequencyButton.contentHorizontalAlignment = .left
         saveScores()
         calculateScore()
     }
@@ -214,10 +219,7 @@ class FallRiskVCFirst: UIViewController  {
     }
     
     func calculateScore() {
-        bowel = incontinence + urgencyOrFrequency
-        mobility = requiresAssistance + unsteadyGait + impairmentMobility
-        cognition = alteredAwareness + impulsive + lackOfUnderstandingOfOnesLimitations
-        let score = age + fallHistory + bowel + medication + patientCareEquipment + mobility + cognition
+        let score = calcFR.calc(bowel: bowel, incontinence: incontinence, urgencyOrFrequency: urgencyOrFrequency, mobility: mobility, requiresAssistance: requiresAssistance, unsteadyGait: unsteadyGait, impairmentMobility: impairmentMobility, cognition: cognition, alteredAwareness: alteredAwareness, impulsive: impulsive, lackOfUnderstandingOfOnesLimitations: lackOfUnderstandingOfOnesLimitations, age: age, fallHistory: fallHistory, medication: medication, patientCareEquipment: patientCareEquipment)
         scoreLabel.text = "\(score)"
         if score < 6 {
             scoreDescriptionLabel.text = " Minor Fall Risk"

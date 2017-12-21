@@ -48,6 +48,8 @@ class FallRiskVCThird: UIViewController {
     let image = UIImage(named: "checkbox-unchecked.png")
     let imageChecked = UIImage(named: "checkbox-checked.png")
     
+    var calcFR = CalculateFallRiskScores()
+    
     
     //var changeImage : ChangeButtonImage!
     
@@ -229,10 +231,7 @@ class FallRiskVCThird: UIViewController {
     }
     
     func calculateScore() {
-        bowel = incontinence + urgencyOrFrequency
-        mobility = requiresAssistance + unsteadyGait + impairmentMobility
-        cognition = alteredAwareness + impulsive + lackOfUnderstandingOfOnesLimitations
-        let score = age + fallHistory + bowel + medication + patientCareEquipment + mobility + cognition
+        let score = calcFR.calc(bowel: bowel, incontinence: incontinence, urgencyOrFrequency: urgencyOrFrequency, mobility: mobility, requiresAssistance: requiresAssistance, unsteadyGait: unsteadyGait, impairmentMobility: impairmentMobility, cognition: cognition, alteredAwareness: alteredAwareness, impulsive: impulsive, lackOfUnderstandingOfOnesLimitations: lackOfUnderstandingOfOnesLimitations, age: age, fallHistory: fallHistory, medication: medication, patientCareEquipment: patientCareEquipment)
         scoreLabel.text = "\(score)"
         if score < 6 {
             scoreDescriptionLabel.text = " Minor Fall Risk"
