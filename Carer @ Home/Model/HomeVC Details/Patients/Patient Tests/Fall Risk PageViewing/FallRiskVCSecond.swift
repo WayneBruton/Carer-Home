@@ -148,6 +148,7 @@ class FallRiskVCSecond: UIViewController {
         let image = UIImage(named: "checkbox-checked.png")
         threeEquipmentPresentButton.setImage(image, for: .normal)
     }
+   
     
     //MARK: Functions
     
