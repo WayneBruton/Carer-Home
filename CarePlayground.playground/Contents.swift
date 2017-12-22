@@ -53,11 +53,56 @@ var age = 10
 
 print(age)
 
-var testing : TestData?
+var scoresArray = [String]()
 
-testing?.age = age
+scoresArray.append("Hello")
+scoresArray.append("GoodBye")
 
-print(testing?.age ?? <#default value#>)
+print(scoresArray)
+
+//scoresArray.removeAll()
+
+print(scoresArray[0])
+//scoresArray[0]
+
+
+//print(scoresArray)
+
+let basicArray = ["age",
+                  "fallHistory",
+                  "bowel",
+                  "medication",
+                  "patientCareEquipment",
+                  "mobility",
+                  "cognition",
+                  "incontinence",
+                  "urgencyOrFrequency",
+                  "requiresAssistance",
+                  "unsteadyGait",
+                  "impairmentMobility",
+                  "alteredAwareness",
+                  "impulsive",
+                  "lackOfUnderstandingOfOnesLimitations"]
+
+var newArray1: [String] = []
+
+for i in 0...basicArray.count - 1 {
+    var item = basicArray[i]
+    newArray1.append(item)
+}
+
+print(newArray1)
+
+
+
+
+
+
+
+
+
+
+
 
 
 

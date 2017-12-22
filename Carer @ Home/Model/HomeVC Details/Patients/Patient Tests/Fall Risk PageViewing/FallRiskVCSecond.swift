@@ -44,7 +44,26 @@ class FallRiskVCSecond: UIViewController {
     var impulsive = 0 //Relates to Cognition
     var lackOfUnderstandingOfOnesLimitations = 0 // Relates to Cognition
     
-    let userDefaults = UserDefaults.standard
+    var scoresArray = [SaveFallRiskScores]()
+    
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Scores.plist")
+    
+    let ageIndex = 0
+    let fallHistoryIndex = 1
+    let bowelIndex = 2
+    let medicationIndex = 3
+    let patientCareEquipmentIndex = 4
+    let mobilityIndex = 5
+    let cognitionIndex = 6
+    let incontinenceIndex = 7
+    let urgencyOrFrequencyIndex = 8
+    let requiresAssistanceIndex = 9
+    let unsteadyGaitIndex = 10
+    let impairmentMobilityIndex = 11
+    let alteredAwarenessIndex = 12
+    let impulsiveIndex = 13
+    let lackOfUnderstandingOfOnesLimitationsIndex = 14
+    
     let image = UIImage(named: "checkbox-unchecked.png")
     let imageChecked = UIImage(named: "checkbox-checked.png")
     
@@ -56,17 +75,13 @@ class FallRiskVCSecond: UIViewController {
         super.viewDidLoad()
         retrieveScores()
         calculateScore()
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        retrieveScores()
-//        calculateScore()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,6 +102,8 @@ class FallRiskVCSecond: UIViewController {
     
     @IBAction func noHighFallRiskDrugButtonTapped(_ sender: UIButton) {
         medication = 0
+        scoresArray[medicationIndex].score = medication
+        saveScores()
         calculateScore()
         medicationButtonImages()
         let image = UIImage(named: "checkbox-checked.png")
@@ -95,6 +112,8 @@ class FallRiskVCSecond: UIViewController {
     
     @IBAction func oneHighFallRiskDrugButtonTapped(_ sender: UIButton) {
         medication = 3
+        scoresArray[medicationIndex].score = medication
+        saveScores()
         calculateScore()
         medicationButtonImages()
         let image = UIImage(named: "checkbox-checked.png")
@@ -103,6 +122,8 @@ class FallRiskVCSecond: UIViewController {
     
     @IBAction func twoOrMoreHighFallRiskDrugButtonTapped(_ sender: UIButton) {
         medication = 5
+        scoresArray[medicationIndex].score = medication
+        saveScores()
         calculateScore()
         medicationButtonImages()
         let image = UIImage(named: "checkbox-checked.png")
@@ -111,6 +132,8 @@ class FallRiskVCSecond: UIViewController {
     
     @IBAction func sedatedProcedureWithin24HoursButtonTapped(_ sender: UIButton) {
         medication = 7
+        scoresArray[medicationIndex].score = medication
+        saveScores()
         calculateScore()
         medicationButtonImages()
         let image = UIImage(named: "checkbox-checked.png")
@@ -119,6 +142,8 @@ class FallRiskVCSecond: UIViewController {
     
     @IBAction func noEquipmentPresentButtonTapped(_ sender: UIButton) {
         patientCareEquipment = 0
+        scoresArray[medicationIndex].score = medication
+        saveScores()
         calculateScore()
         patientCareEquipmentButtonImages()
         let image = UIImage(named: "checkbox-checked.png")
@@ -127,6 +152,8 @@ class FallRiskVCSecond: UIViewController {
     
     @IBAction func oneEquipmentPresentButtonTapped(_ sender: UIButton) {
         patientCareEquipment = 1
+        scoresArray[patientCareEquipmentIndex].score = patientCareEquipment
+        saveScores()
         calculateScore()
         patientCareEquipmentButtonImages()
         let image = UIImage(named: "checkbox-checked.png")
@@ -135,6 +162,8 @@ class FallRiskVCSecond: UIViewController {
     
     @IBAction func twoEquipmentPresentButtonTapped(_ sender: UIButton) {
         patientCareEquipment = 2
+        scoresArray[patientCareEquipmentIndex].score = patientCareEquipment
+        saveScores()
         calculateScore()
         patientCareEquipmentButtonImages()
         let image = UIImage(named: "checkbox-checked.png")
@@ -143,6 +172,8 @@ class FallRiskVCSecond: UIViewController {
     
     @IBAction func threeEquipmentPresentButtonTapped(_ sender: UIButton) {
         patientCareEquipment = 3
+        scoresArray[patientCareEquipmentIndex].score = patientCareEquipment
+        saveScores()
         calculateScore()
         patientCareEquipmentButtonImages()
         let image = UIImage(named: "checkbox-checked.png")
@@ -176,59 +207,7 @@ class FallRiskVCSecond: UIViewController {
         threeEquipmentPresentButton.setImage(image, for: .normal)
     }
     
-    func saveScores() {
-        userDefaults.set(age, forKey: "age")
-        userDefaults.set(fallHistory, forKey: "fallHistory")
-        userDefaults.set(medication, forKey: "medication")
-        userDefaults.set(patientCareEquipment, forKey: "patientCareEquipment")
-        userDefaults.set(incontinence, forKey: "incontinence")
-        userDefaults.set(urgencyOrFrequency, forKey: "urgencyOrFrequency")
-        userDefaults.set(requiresAssistance, forKey: "requiresAssistance")//*****
-        userDefaults.set(unsteadyGait, forKey: "unsteadyGait")
-        userDefaults.set(impairmentMobility, forKey: "impairmentMobility")
-        userDefaults.set(alteredAwareness, forKey: "alteredAwareness")
-        userDefaults.set(impulsive, forKey: "impulsive")
-        userDefaults.set(lackOfUnderstandingOfOnesLimitations, forKey: "lackOfUnderstandingOfOnesLimitations")
-    }
-    func retrieveScores() {
-        if userDefaults.integer(forKey: "age") != 0 {
-            age = userDefaults.integer(forKey: "age")
-        }
-        if userDefaults.integer(forKey: "fallHistory") != 0 {
-            fallHistory = userDefaults.integer(forKey: "fallHistory")
-        }
-        if userDefaults.integer(forKey: "medication") != 0 {
-            medication = userDefaults.integer(forKey: "medication")
-        }
-        if userDefaults.integer(forKey: "patientCareEquipment") != 0 {
-            patientCareEquipment = userDefaults.integer(forKey: "patientCareEquipment")
-        }
-        if userDefaults.integer(forKey: "incontinence") != 0 {
-            incontinence = userDefaults.integer(forKey: "incontinence")
-        }
-        if userDefaults.integer(forKey: "urgencyOrFrequency") != 0 {
-            urgencyOrFrequency = userDefaults.integer(forKey: "urgencyOrFrequency")
-        }
-        if userDefaults.integer(forKey: "requiresAssistance") != 0 {
-            requiresAssistance = userDefaults.integer(forKey: "requiresAssistance")
-        }
-        
-        if userDefaults.integer(forKey: "unsteadyGait") != 0 {
-            unsteadyGait = userDefaults.integer(forKey: "unsteadyGait")
-        }
-        if userDefaults.integer(forKey: "impairmentMobility") != 0 {
-            impairmentMobility = userDefaults.integer(forKey: "impairmentMobility")
-        }
-        if userDefaults.integer(forKey: "alteredAwareness") != 0 {
-            alteredAwareness = userDefaults.integer(forKey: "alteredAwareness")
-        }
-        if userDefaults.integer(forKey: "impulsive") != 0 {
-            impulsive = userDefaults.integer(forKey: "impulsive")
-        }
-        if userDefaults.integer(forKey: "lackOfUnderstandingOfOnesLimitations") != 0 {
-            lackOfUnderstandingOfOnesLimitations = userDefaults.integer(forKey: "lackOfUnderstandingOfOnesLimitations")
-        }
-    }
+
     
     func calculateScore() {
         let score = calcFR.calc(bowel: bowel, incontinence: incontinence, urgencyOrFrequency: urgencyOrFrequency, mobility: mobility, requiresAssistance: requiresAssistance, unsteadyGait: unsteadyGait, impairmentMobility: impairmentMobility, cognition: cognition, alteredAwareness: alteredAwareness, impulsive: impulsive, lackOfUnderstandingOfOnesLimitations: lackOfUnderstandingOfOnesLimitations, age: age, fallHistory: fallHistory, medication: medication, patientCareEquipment: patientCareEquipment)
@@ -239,6 +218,29 @@ class FallRiskVCSecond: UIViewController {
             scoreDescriptionLabel.text = "Moderate Fall Risk"
         } else if score > 13 {
             scoreDescriptionLabel.text = "High Fall Risk"
+        }
+    }
+    
+ 
+    func saveScores() {
+        
+        let encoder = PropertyListEncoder()
+        do {
+            let data = try encoder.encode(scoresArray)
+            try data.write(to: dataFilePath!)
+        } catch {
+            print("Error encoding item Array \(error)")
+        }
+    }
+    
+    func retrieveScores() {
+        if let data = try? Data(contentsOf: dataFilePath!) {
+            let decoder = PropertyListDecoder()
+            do {
+                scoresArray = try decoder.decode([SaveFallRiskScores].self, from: data)
+            } catch {
+                print("error decoding item array \(error) ")
+            }
         }
     }
     

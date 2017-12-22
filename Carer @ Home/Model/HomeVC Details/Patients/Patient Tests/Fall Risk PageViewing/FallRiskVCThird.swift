@@ -44,14 +44,31 @@ class FallRiskVCThird: UIViewController {
     var impulsive = 0 //Relates to Cognition
     var lackOfUnderstandingOfOnesLimitations = 0 // Relates to Cognition
     
-    let userDefaults = UserDefaults.standard
+    var scoresArray = [SaveFallRiskScores]()
+    
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Scores.plist")
+    
+    let ageIndex = 0
+    let fallHistoryIndex = 1
+    let bowelIndex = 2
+    let medicationIndex = 3
+    let patientCareEquipmentIndex = 4
+    let mobilityIndex = 5
+    let cognitionIndex = 6
+    let incontinenceIndex = 7
+    let urgencyOrFrequencyIndex = 8
+    let requiresAssistanceIndex = 9
+    let unsteadyGaitIndex = 10
+    let impairmentMobilityIndex = 11
+    let alteredAwarenessIndex = 12
+    let impulsiveIndex = 13
+    let lackOfUnderstandingOfOnesLimitationsIndex = 14
+    
     let image = UIImage(named: "checkbox-unchecked.png")
     let imageChecked = UIImage(named: "checkbox-checked.png")
     
     var calcFR = CalculateFallRiskScores()
     
-    
-    //var changeImage : ChangeButtonImage!
     
     // MARK: ViewDidLoad etc
     
@@ -85,6 +102,7 @@ class FallRiskVCThird: UIViewController {
         } else {
             mobility = 0
         }
+        scoresArray[mobilityIndex].score = mobility
         saveScores()
         calculateScore()
     }
@@ -96,6 +114,7 @@ class FallRiskVCThird: UIViewController {
         } else {
             requiresAssistance = 0
         }
+        scoresArray[requiresAssistanceIndex].score = requiresAssistance
         saveScores()
         calculateScore()
     }
@@ -107,6 +126,7 @@ class FallRiskVCThird: UIViewController {
         } else {
             unsteadyGait = 0
         }
+        scoresArray[unsteadyGaitIndex].score = unsteadyGait
         saveScores()
         calculateScore()
     }
@@ -118,6 +138,7 @@ class FallRiskVCThird: UIViewController {
         } else {
             impairmentMobility = 0
         }
+        scoresArray[impairmentMobilityIndex].score = impairmentMobility
         saveScores()
         calculateScore()
     }
@@ -125,10 +146,18 @@ class FallRiskVCThird: UIViewController {
     @IBAction func cognitionNoIssuesButtonTapped(_ sender: UIButton) {
         changeImage(sender: sender)
         if sender.currentImage == imageChecked {
+            cognitionAlteredAwarenessButton.setImage(image, for: .normal)
+            cognitionImpulsiveButton.setImage(image, for: .normal)
+            cognitionImpulsiveButton.setImage(image, for: .normal)
+            cognitionAwarenessPhysicalOrCognitiveAbilitiesButton.setImage(image, for: .normal)
+            impulsive = 0
+            alteredAwareness = 0
+            lackOfUnderstandingOfOnesLimitations = 0
             cognition = 0
         } else {
             cognition = 0
         }
+        scoresArray[impulsiveIndex].score = impulsive
         saveScores()
         calculateScore()
     }
@@ -140,6 +169,7 @@ class FallRiskVCThird: UIViewController {
         } else {
             alteredAwareness = 0
         }
+        scoresArray[alteredAwarenessIndex].score = alteredAwareness
         saveScores()
         calculateScore()
     }
@@ -151,6 +181,7 @@ class FallRiskVCThird: UIViewController {
         } else {
             impulsive = 0
         }
+        scoresArray[impulsiveIndex].score = impulsive
         saveScores()
         calculateScore()
     }
@@ -162,6 +193,7 @@ class FallRiskVCThird: UIViewController {
         } else {
             lackOfUnderstandingOfOnesLimitations = 0
         }
+        scoresArray[lackOfUnderstandingOfOnesLimitationsIndex].score = lackOfUnderstandingOfOnesLimitations
         saveScores()
         calculateScore()
     }
@@ -175,60 +207,6 @@ class FallRiskVCThird: UIViewController {
             sender.setImage(image, for: .normal)
         }
     }
-
-    func saveScores() {
-        userDefaults.set(age, forKey: "age")
-        userDefaults.set(fallHistory, forKey: "fallHistory")
-        userDefaults.set(medication, forKey: "medication")
-        userDefaults.set(patientCareEquipment, forKey: "patientCareEquipment")
-        userDefaults.set(incontinence, forKey: "incontinence")
-        userDefaults.set(urgencyOrFrequency, forKey: "urgencyOrFrequency")
-        userDefaults.set(requiresAssistance, forKey: "requiresAssistance")//*****
-        userDefaults.set(unsteadyGait, forKey: "unsteadyGait")
-        userDefaults.set(impairmentMobility, forKey: "impairmentMobility")
-        userDefaults.set(alteredAwareness, forKey: "alteredAwareness")
-        userDefaults.set(impulsive, forKey: "impulsive")
-        userDefaults.set(lackOfUnderstandingOfOnesLimitations, forKey: "lackOfUnderstandingOfOnesLimitations")
-    }
-    func retrieveScores() {
-        if userDefaults.integer(forKey: "age") != 0 {
-            age = userDefaults.integer(forKey: "age")
-        }
-        if userDefaults.integer(forKey: "fallHistory") != 0 {
-            fallHistory = userDefaults.integer(forKey: "fallHistory")
-        }
-        if userDefaults.integer(forKey: "medication") != 0 {
-            medication = userDefaults.integer(forKey: "medication")
-        }
-        if userDefaults.integer(forKey: "patientCareEquipment") != 0 {
-            patientCareEquipment = userDefaults.integer(forKey: "patientCareEquipment")
-        }
-        if userDefaults.integer(forKey: "incontinence") != 0 {
-            incontinence = userDefaults.integer(forKey: "incontinence")
-        }
-        if userDefaults.integer(forKey: "urgencyOrFrequency") != 0 {
-            urgencyOrFrequency = userDefaults.integer(forKey: "urgencyOrFrequency")
-        }
-        if userDefaults.integer(forKey: "requiresAssistance") != 0 {
-            requiresAssistance = userDefaults.integer(forKey: "requiresAssistance")
-        }
-        
-        if userDefaults.integer(forKey: "unsteadyGait") != 0 {
-            unsteadyGait = userDefaults.integer(forKey: "unsteadyGait")
-        }
-        if userDefaults.integer(forKey: "impairmentMobility") != 0 {
-            impairmentMobility = userDefaults.integer(forKey: "impairmentMobility")
-        }
-        if userDefaults.integer(forKey: "alteredAwareness") != 0 {
-            alteredAwareness = userDefaults.integer(forKey: "alteredAwareness")
-        }
-        if userDefaults.integer(forKey: "impulsive") != 0 {
-            impulsive = userDefaults.integer(forKey: "impulsive")
-        }
-        if userDefaults.integer(forKey: "lackOfUnderstandingOfOnesLimitations") != 0 {
-            lackOfUnderstandingOfOnesLimitations = userDefaults.integer(forKey: "lackOfUnderstandingOfOnesLimitations")
-        }
-    }
     
     func calculateScore() {
         let score = calcFR.calc(bowel: bowel, incontinence: incontinence, urgencyOrFrequency: urgencyOrFrequency, mobility: mobility, requiresAssistance: requiresAssistance, unsteadyGait: unsteadyGait, impairmentMobility: impairmentMobility, cognition: cognition, alteredAwareness: alteredAwareness, impulsive: impulsive, lackOfUnderstandingOfOnesLimitations: lackOfUnderstandingOfOnesLimitations, age: age, fallHistory: fallHistory, medication: medication, patientCareEquipment: patientCareEquipment)
@@ -239,6 +217,28 @@ class FallRiskVCThird: UIViewController {
             scoreDescriptionLabel.text = "Moderate Fall Risk"
         } else if score > 13 {
             scoreDescriptionLabel.text = "High Fall Risk"
+        }
+    }
+    
+    func saveScores() {
+        
+        let encoder = PropertyListEncoder()
+        do {
+            let data = try encoder.encode(scoresArray)
+            try data.write(to: dataFilePath!)
+        } catch {
+            print("Error encoding item Array \(error)")
+        }
+    }
+    
+    func retrieveScores() {
+        if let data = try? Data(contentsOf: dataFilePath!) {
+            let decoder = PropertyListDecoder()
+            do {
+                scoresArray = try decoder.decode([SaveFallRiskScores].self, from: data)
+            } catch {
+                print("error decoding item array \(error) ")
+            }
         }
     }
 

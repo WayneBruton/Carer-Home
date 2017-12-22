@@ -25,28 +25,47 @@ class FallRiskVCFirst: UIViewController  {
     
     //MARK: Variances & Constants
     
-    var age = 0
+    var age: Int = 0
     var fallHistory = 0
     var bowel = 0
     var medication = 0
     var patientCareEquipment = 0
     var mobility = 0
     var cognition = 0
-    
     var incontinence = 0 //Relates to Bowel
     var urgencyOrFrequency = 0 // Relates to Bowel
-    
     var requiresAssistance = 0 // Relates to Mobility
     var unsteadyGait = 0 //Relates to Mobility
     var impairmentMobility = 0 //Relates to Mobility
-    
     var alteredAwareness = 0 //Relates to Cognition
     var impulsive = 0 //Relates to Cognition
     var lackOfUnderstandingOfOnesLimitations = 0 // Relates to Cognition
     
-    let userDefaults = UserDefaults.standard
+    
+    var scoresArray = [SaveFallRiskScores]()
+    
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Scores.plist")
+    
     let image = UIImage(named: "checkbox-unchecked.png")
     let imageChecked = UIImage(named: "checkbox-checked.png")
+    
+    let basicArray = ["age","fallHistory","bowel","medication","patientCareEquipment","mobility","cognition","incontinence","urgencyOrFrequency","requiresAssistance","unsteadyGait","impairmentMobility","alteredAwareness","impulsive","lackOfUnderstandingOfOnesLimitations"]
+    
+    let ageIndex = 0
+    let fallHistoryIndex = 1
+    let bowelIndex = 2
+    let medicationIndex = 3
+    let patientCareEquipmentIndex = 4
+    let mobilityIndex = 5
+    let cognitionIndex = 6
+    let incontinenceIndex = 7
+    let urgencyOrFrequencyIndex = 8
+    let requiresAssistanceIndex = 9
+    let unsteadyGaitIndex = 10
+    let impairmentMobilityIndex = 11
+    let alteredAwarenessIndex = 12
+    let impulsiveIndex = 13
+    let lackOfUnderstandingOfOnesLimitationsIndex = 14
     
     var calcFR = CalculateFallRiskScores()
     //MARK: ViewDidLoad Etc
@@ -59,8 +78,10 @@ class FallRiskVCFirst: UIViewController  {
         age80AndMoreButton.contentHorizontalAlignment = .left
         incontinenceButton.contentHorizontalAlignment = .left
         UrgencyOrFrequencyButton.contentHorizontalAlignment = .left
+        resetScores()
         saveScores()
         calculateScore()
+        
     }
     
 
@@ -80,6 +101,7 @@ class FallRiskVCFirst: UIViewController  {
         ageButtonImages()
         let image = UIImage(named: "checkbox-checked.png")
         ageLess60Button.setImage(image, for: .normal)
+        scoresArray[ageIndex].score = age
         saveScores()
         calculateScore()
     }
@@ -89,6 +111,7 @@ class FallRiskVCFirst: UIViewController  {
         ageButtonImages()
         let image = UIImage(named: "checkbox-checked.png")
          age60To69Button.setImage(image, for: .normal)
+        scoresArray[ageIndex].score = age
         saveScores()
         calculateScore()
     }
@@ -98,6 +121,7 @@ class FallRiskVCFirst: UIViewController  {
         ageButtonImages()
         let image = UIImage(named: "checkbox-checked.png")
         age70To79Button.setImage(image, for: .normal)
+        scoresArray[ageIndex].score = age
         saveScores()
         calculateScore()
     }
@@ -107,6 +131,7 @@ class FallRiskVCFirst: UIViewController  {
         ageButtonImages()
         let image = UIImage(named: "checkbox-checked.png")
         age80AndMoreButton.setImage(image, for: .normal)
+        scoresArray[ageIndex].score = age
         saveScores()
         calculateScore()
     }
@@ -118,6 +143,7 @@ class FallRiskVCFirst: UIViewController  {
         } else {
             fallHistory = 0
         }
+        scoresArray[fallHistoryIndex].score = fallHistory
         saveScores()
         calculateScore()
     }
@@ -129,6 +155,7 @@ class FallRiskVCFirst: UIViewController  {
         } else {
             incontinence = 0
         }
+        scoresArray[incontinenceIndex].score = incontinence
         saveScores()
         calculateScore()
         
@@ -141,6 +168,7 @@ class FallRiskVCFirst: UIViewController  {
         } else {
             urgencyOrFrequency = 0
         }
+        scoresArray[urgencyOrFrequencyIndex].score = urgencyOrFrequency
         saveScores()
         calculateScore()
     }
@@ -164,60 +192,6 @@ class FallRiskVCFirst: UIViewController  {
         
     }
     
-    func saveScores() {
-        userDefaults.set(age, forKey: "age")
-        userDefaults.set(fallHistory, forKey: "fallHistory")
-        userDefaults.set(medication, forKey: "medication")
-        userDefaults.set(patientCareEquipment, forKey: "patientCareEquipment")
-        userDefaults.set(incontinence, forKey: "incontinence")
-        userDefaults.set(urgencyOrFrequency, forKey: "urgencyOrFrequency")
-        userDefaults.set(requiresAssistance, forKey: "requiresAssistance")//*****
-        userDefaults.set(unsteadyGait, forKey: "unsteadyGait")
-        userDefaults.set(impairmentMobility, forKey: "impairmentMobility")
-        userDefaults.set(alteredAwareness, forKey: "alteredAwareness")
-        userDefaults.set(impulsive, forKey: "impulsive")
-        userDefaults.set(lackOfUnderstandingOfOnesLimitations, forKey: "lackOfUnderstandingOfOnesLimitations")
-    }
-    func retrieveScores() {
-        if userDefaults.integer(forKey: "age") != 0 {
-            age = userDefaults.integer(forKey: "age")
-        }
-        if userDefaults.integer(forKey: "fallHistory") != 0 {
-            fallHistory = userDefaults.integer(forKey: "fallHistory")
-        }
-        if userDefaults.integer(forKey: "medication") != 0 {
-            medication = userDefaults.integer(forKey: "medication")
-        }
-        if userDefaults.integer(forKey: "patientCareEquipment") != 0 {
-            patientCareEquipment = userDefaults.integer(forKey: "patientCareEquipment")
-        }
-        if userDefaults.integer(forKey: "incontinence") != 0 {
-            incontinence = userDefaults.integer(forKey: "incontinence")
-        }
-        if userDefaults.integer(forKey: "urgencyOrFrequency") != 0 {
-            urgencyOrFrequency = userDefaults.integer(forKey: "urgencyOrFrequency")
-        }
-        if userDefaults.integer(forKey: "requiresAssistance") != 0 {
-            requiresAssistance = userDefaults.integer(forKey: "requiresAssistance")
-        }
-        
-        if userDefaults.integer(forKey: "unsteadyGait") != 0 {
-            unsteadyGait = userDefaults.integer(forKey: "unsteadyGait")
-        }
-        if userDefaults.integer(forKey: "impairmentMobility") != 0 {
-            impairmentMobility = userDefaults.integer(forKey: "impairmentMobility")
-        }
-        if userDefaults.integer(forKey: "alteredAwareness") != 0 {
-            alteredAwareness = userDefaults.integer(forKey: "alteredAwareness")
-        }
-        if userDefaults.integer(forKey: "impulsive") != 0 {
-            impulsive = userDefaults.integer(forKey: "impulsive")
-        }
-        if userDefaults.integer(forKey: "lackOfUnderstandingOfOnesLimitations") != 0 {
-            lackOfUnderstandingOfOnesLimitations = userDefaults.integer(forKey: "lackOfUnderstandingOfOnesLimitations")
-        }
-    }
-    
     func calculateScore() {
         let score = calcFR.calc(bowel: bowel, incontinence: incontinence, urgencyOrFrequency: urgencyOrFrequency, mobility: mobility, requiresAssistance: requiresAssistance, unsteadyGait: unsteadyGait, impairmentMobility: impairmentMobility, cognition: cognition, alteredAwareness: alteredAwareness, impulsive: impulsive, lackOfUnderstandingOfOnesLimitations: lackOfUnderstandingOfOnesLimitations, age: age, fallHistory: fallHistory, medication: medication, patientCareEquipment: patientCareEquipment)
         scoreLabel.text = "\(score)"
@@ -227,6 +201,44 @@ class FallRiskVCFirst: UIViewController  {
             scoreDescriptionLabel.text = "Moderate Fall Risk"
         } else if score > 13 {
             scoreDescriptionLabel.text = "High Fall Risk"
+        }
+    }
+    
+    //MARK: NSCoding
+    
+    func resetScores() {
+        scoresArray.removeAll()
+        saveScores()
+
+        for i in 0...basicArray.count - 1 {
+            let newItem = SaveFallRiskScores()
+            //let name: String = basicArray[i]
+            newItem.scoreName = basicArray[i]
+            print(newItem.scoreName)
+            scoresArray.append(newItem)
+            saveScores()
+        }
+        
+    }
+    func saveScores() {
+        
+        let encoder = PropertyListEncoder()
+        do {
+            let data = try encoder.encode(scoresArray)
+            try data.write(to: dataFilePath!)
+        } catch {
+            print("Error encoding item Array \(error)")
+        }
+    }
+    
+    func retrieveScores() {
+        if let data = try? Data(contentsOf: dataFilePath!) {
+            let decoder = PropertyListDecoder()
+            do {
+                scoresArray = try decoder.decode([SaveFallRiskScores].self, from: data)
+            } catch {
+                print("error decoding item array \(error) ")
+            }
         }
     }
 }
