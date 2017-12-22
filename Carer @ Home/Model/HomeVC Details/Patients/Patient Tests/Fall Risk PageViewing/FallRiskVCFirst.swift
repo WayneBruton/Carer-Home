@@ -41,9 +41,7 @@ class FallRiskVCFirst: UIViewController  {
     var impulsive = 0 //Relates to Cognition
     var lackOfUnderstandingOfOnesLimitations = 0 // Relates to Cognition
     
-    
     var scoresArray = [SaveFallRiskScores]()
-    
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Scores.plist")
     
     let image = UIImage(named: "checkbox-unchecked.png")
@@ -81,7 +79,6 @@ class FallRiskVCFirst: UIViewController  {
         resetScores()
         saveScores()
         calculateScore()
-        
     }
     
 
@@ -209,19 +206,14 @@ class FallRiskVCFirst: UIViewController  {
     func resetScores() {
         scoresArray.removeAll()
         saveScores()
-
         for i in 0...basicArray.count - 1 {
             let newItem = SaveFallRiskScores()
-            //let name: String = basicArray[i]
             newItem.scoreName = basicArray[i]
-            print(newItem.scoreName)
             scoresArray.append(newItem)
             saveScores()
         }
-        
     }
     func saveScores() {
-        
         let encoder = PropertyListEncoder()
         do {
             let data = try encoder.encode(scoresArray)

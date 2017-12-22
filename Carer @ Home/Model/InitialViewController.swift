@@ -75,7 +75,6 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Check all fields input correctly before Segue
     
-    
     func checkDetails() {
         //Check - A field Blank - 1
         //Check - Invalid email address - 2
@@ -105,18 +104,6 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
             present(alert, animated: true, completion: nil)
             //print("Invalid email address")
         default:
-//            if emailAddress != userTextField.text || password != passwordTextField.text {
-//                var alert = UIAlertController(title: "Error", message: "email or Password is incorrect", preferredStyle: .alert)
-//                var alertAction = UIAlertAction(title: "Try Again", style: .default, handler: { (alertAction) in
-//                    self.userTextField.text = ""
-//                    self.passwordTextField.text = ""
-//                })
-//            } else {
-//                ProgressHUD.showSuccess("Logging On")
-//                performSegue(withIdentifier: "goToHomeScreen", sender: self)
-//            }
-            
-            //ProgressHUD.showSuccess("Logging On")
             performSegue(withIdentifier: "goToHomeScreen", sender: self)
         }
     }

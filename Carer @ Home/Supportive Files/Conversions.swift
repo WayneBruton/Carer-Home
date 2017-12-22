@@ -14,7 +14,6 @@ class Conversion {
     // Measurement Conversions
     
     init() {
-        
     }
     
     func celciusToFahrenheit(celcius : Double) -> Double {
@@ -26,5 +25,4 @@ class Conversion {
         let resultInCelcius = (fahrenheit - 32)/1.8
         return resultInCelcius
     }
-    
 }

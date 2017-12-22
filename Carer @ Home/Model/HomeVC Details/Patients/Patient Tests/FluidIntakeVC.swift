@@ -11,7 +11,6 @@ import ProgressHUD
 import MARoundButton
 import SGauge
 
-
 class FluidIntakeVC: UIViewController {
     
     @IBOutlet weak var fluidMeter: SGauge!

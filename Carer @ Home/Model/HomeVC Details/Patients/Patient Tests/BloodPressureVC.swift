@@ -10,7 +10,6 @@ import UIKit
 import VerticalSteppedSlider
 import ProgressHUD
 
-
 class BloodPressureVC: UIViewController {
     
     @IBOutlet weak var systolicSlider: VSSlider!
@@ -20,7 +19,6 @@ class BloodPressureVC: UIViewController {
     
     var systolicBP : Float = 0
     var diastolicBP : Float = 0
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

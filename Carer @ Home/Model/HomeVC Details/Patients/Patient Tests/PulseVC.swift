@@ -13,7 +13,6 @@ import RoundedSwitch
 
 class PulseVC: UIViewController {
     
-   
     @IBOutlet weak var restingActiveSwitch: Switch!
     @IBOutlet weak var pulseStepper: GMStepper!
     @IBOutlet weak var ageStepper: UIStepper!
@@ -79,10 +78,6 @@ class PulseVC: UIViewController {
             pulseStepper.minimumValue = 25
             pulseStepper.maximumValue = 150
             pulseStepper.value = 80
-            
         }
     }
-    
-    
-
 }

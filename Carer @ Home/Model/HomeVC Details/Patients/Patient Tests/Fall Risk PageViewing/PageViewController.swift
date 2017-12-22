@@ -11,14 +11,9 @@ import UIKit
 
 class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
-    
-    
-    
-    
     // MARK: IB Outlets
     
     //MARK: Variables & Constants
-    
     
     lazy var orderedViewControllers: [UIViewController] = {
         return [self.newVc(viewController: "FallRiskVCFirst"),
@@ -26,12 +21,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
                 self.newVc(viewController: "FallRiskVCThird")]
     }()
     var pageControl = UIPageControl()
-
     
-    
-
     // MARK: viewDidLoad etc
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,11 +42,9 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: PageViewController
-    
     
     func newVc(viewController: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController)

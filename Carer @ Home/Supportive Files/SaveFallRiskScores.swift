@@ -11,5 +11,4 @@ import Foundation
 class SaveFallRiskScores : Codable {
     var scoreName: String = ""
     var score: Int = 0
-    
 }

@@ -180,7 +180,6 @@ class FallRiskVCSecond: UIViewController {
         threeEquipmentPresentButton.setImage(image, for: .normal)
     }
    
-    
     //MARK: Functions
     
     func changeImage(sender: UIButton) {
@@ -207,8 +206,6 @@ class FallRiskVCSecond: UIViewController {
         threeEquipmentPresentButton.setImage(image, for: .normal)
     }
     
-
-    
     func calculateScore() {
         let score = calcFR.calc(bowel: bowel, incontinence: incontinence, urgencyOrFrequency: urgencyOrFrequency, mobility: mobility, requiresAssistance: requiresAssistance, unsteadyGait: unsteadyGait, impairmentMobility: impairmentMobility, cognition: cognition, alteredAwareness: alteredAwareness, impulsive: impulsive, lackOfUnderstandingOfOnesLimitations: lackOfUnderstandingOfOnesLimitations, age: age, fallHistory: fallHistory, medication: medication, patientCareEquipment: patientCareEquipment)
         scoreLabel.text = "\(score)"
@@ -221,7 +218,6 @@ class FallRiskVCSecond: UIViewController {
         }
     }
     
- 
     func saveScores() {
         
         let encoder = PropertyListEncoder()

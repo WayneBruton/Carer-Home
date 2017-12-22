@@ -20,7 +20,6 @@ class patientDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     var navTitle = ""
     var vcTitle = ""
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -102,8 +101,6 @@ class patientDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
             VC.title = "\(navTitle) - \(vcTitle)"
             navigationItem.title = ""
         }
-        
-        
     }
     
     // MARK: Table View Setup

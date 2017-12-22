@@ -10,7 +10,6 @@ import UIKit
 
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
-
     @IBOutlet weak var tableViewHome: UITableView!
 
     let tableViewData = ["User Settings", "Contacts", "Patients", "Messages","Reports", "Feedback / Questions", "Latest News"]
@@ -23,8 +22,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         super.viewDidLoad()
         tableViewHome.delegate = self
         tableViewHome.dataSource = self
-//        print(userDefaults.object(forKey: "emailAddress") as Any)
-//        print(userDefaults.object(forKey: "password") as Any)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -33,7 +30,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     override func viewWillAppear(_ animated: Bool) {
         adjustNavigationController()
     }
+    
     // MARK: Prepare for Segue
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "user" {
             let userVC = segue.destination as! UserPreferencesVC
@@ -71,7 +70,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
             navigationItem.title = ""
         }
     }
+    
     // MARK : Adjust Navigation Controller
+    
     func adjustNavigationController() {
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
@@ -130,14 +131,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
             self.dismiss(animated: true, completion: nil)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        //let addNewClientAction = UIAlertAction(title: "Add New Client", style: .default, handler: nil)
-        //let addNewContactAction = UIAlertAction(title: "Add New Contact", style: .default, handler: nil)
-        //let startNewChatAction = UIAlertAction(title: "Start New Chat", style: .default, handler: nil)
-        
         alert.addAction(cancelAction)
-        //alert.addAction(addNewClientAction)
-        //alert.addAction(addNewContactAction)
-        //alert.addAction(startNewChatAction)
         alert.addAction(signOutAction)
         present(alert, animated: true, completion: nil)
     }

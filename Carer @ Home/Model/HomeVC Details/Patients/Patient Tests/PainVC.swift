@@ -14,6 +14,8 @@ import MARoundButton
 
 class PainVC: UIViewController {
     
+    //Mark: Ib Outlets
+    
     @IBOutlet weak var painScaleGuage: SGauge!
     @IBOutlet weak var painLabel: UILabel!
     @IBOutlet weak var increasePainButton: MARoundButton!
@@ -32,6 +34,8 @@ class PainVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    //MARk: IbActions
     
     @IBAction func increasePainButtonPressed(_ sender: MARoundButton) {
         painLevel += 1
@@ -58,7 +62,6 @@ class PainVC: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    
     func showButton() {
         if painLevel <= 0 {
             decreasePainButton.isEnabled = false
@@ -78,7 +81,6 @@ class PainVC: UIViewController {
             increasePainButton.isEnabled = true
             increasePainButton.isHidden = false
         }
-        
     }
     
     func processGauge() {
@@ -130,6 +132,4 @@ class PainVC: UIViewController {
             painLabel.textColor = UIColor.red
         }
     }
-    
-
 }

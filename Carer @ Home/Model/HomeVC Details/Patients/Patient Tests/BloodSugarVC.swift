@@ -23,7 +23,6 @@ class BloodSugarVC: UIViewController {
     @IBOutlet weak var mgPerdlLabel: UILabel!
     @IBOutlet weak var sugarStepper: GMStepper!
     
-    
     // MARK: Variables & Constants
     
     var mmolPerLitre = 0.0
@@ -31,11 +30,8 @@ class BloodSugarVC: UIViewController {
     var HbAc1 = 0.0
     var molPerLireRatio = 0.18015588
     var mmolPerMol = 0.0
-    
     var timer = Timer()
-    
     var sound = ClickSound()
-    
     
     // MARK:  ViewDidLoad
     
@@ -51,8 +47,6 @@ class BloodSugarVC: UIViewController {
     
     // MARK: IB Actions
     
-   
-    
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         let alert = UIAlertController(title: "Save", message: "Save Blood Glucose Readings", preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Save", style: .default) { (saveAction) in
@@ -64,13 +58,11 @@ class BloodSugarVC: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    
     @IBAction func sugarStepperPressed(_ sender: GMStepper) {
        mmolPerLitre = sugarStepper.value
         sugarStepper.value = round(mmolPerLitre * 10) / 10
         calcSugar()
     }
-    
     
     // MARK: Methods
     
@@ -78,7 +70,6 @@ class BloodSugarVC: UIViewController {
         
         if CGFloat(mmolPerLitre) >= sugarGauge.maxValue {
             mmolPerLitre = Double(sugarGauge.maxValue)
-            
         }
         if CGFloat(mmolPerLitre) <= sugarGauge.minValue {
             mmolPerLitre = Double(sugarGauge.minValue)

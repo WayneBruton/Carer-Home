@@ -31,7 +31,6 @@ class TemperatureVC: UIViewController {
     
     // MARK: IB Actions
     
-
     @IBAction func tempChangeStepper(_ sender: GMStepper) {
         temp = tempChangeStepper.value
         temp = (round(temp * 10))/10
@@ -60,37 +59,21 @@ class TemperatureVC: UIViewController {
     @IBAction func chartBarButtonPressed(_ sender: UIBarButtonItem) {
         let chartAlert = UIAlertController(title: "Charts", message: "Show visual representation", preferredStyle: .actionSheet)
         let barAction = UIAlertAction(title: "Bar Chart", style: .default) { (barAction) in
-            //Open VC goes here
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "BarChart") as! BarChartVC
-            
             vc.lastTempReading = self.temp
             vc.title = self.vcTitle
-            //self.navigationController?.pushViewController(vc, animated: true)
-            
-            
-            
             self.present(vc, animated: true, completion: nil)
         }
         let lineAction = UIAlertAction(title: "Line Chart", style: .default) { (lineAction) in
-            //Vc Goes Here
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "LineChart") as! LineChartVC
-            
             vc.lastTempReading = self.temp
             vc.title = self.vcTitle
-            //self.navigationController?.pushViewController(vc, animated: true)
-            
-            
-            
             self.present(vc, animated: true, completion: nil)
         }
-        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         chartAlert.addAction(barAction)
         chartAlert.addAction(lineAction)
         chartAlert.addAction(cancelAction)
         present(chartAlert, animated: true, completion: nil)
     }
-    
-    
-    
 }

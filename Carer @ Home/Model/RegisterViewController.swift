@@ -55,6 +55,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
+    
     @IBAction func cancelRegistrationButtonPressed(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Stop Registration", message: "Go back to Log in Screen", preferredStyle: .actionSheet)
         let alertAction = UIAlertAction(title: "Return to Log in?", style: .default) { (alertAction) in
@@ -85,13 +86,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Prepare for Segue
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToHomeScreen" {
-//            let secondVC = segue.destination as! UINavigationController ====== Come Bachk to this
-//            let hVC = secondVC.topViewController as! HomeVC
-            
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "goToHomeScreen" {
+//
+//        }
+//    }
     
     // MARK: Check if fits email address requirements
     
