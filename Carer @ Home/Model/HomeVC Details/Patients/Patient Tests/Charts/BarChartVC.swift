@@ -77,17 +77,13 @@ class BarChartVC: UIViewController {
     
     func setChart(dataPoints : [String], values : [Double]) {
         var dataEntries: [BarChartDataEntry] = []
-        
+    
         for i in 0..<dataPoints.count {
             let dataEntry = BarChartDataEntry(x: Double(i), y: values[i])
             dataEntries.append(dataEntry)
         }
-        
         let chartDataSet = BarChartDataSet(values: dataEntries, label: title)
-        
-        
         chartDataSet.colors = [UIColor.blue]
-
         let chartData = BarChartData(dataSet: chartDataSet)
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: dataPoints) // X Axis Labels
         barChart.xAxis.labelPosition = .bottom
@@ -98,11 +94,7 @@ class BarChartVC: UIViewController {
         let llmin = ChartLimitLine(limit: 36.2, label: "")
         barChart.rightAxis.addLimitLine(llmax)
         barChart.rightAxis.addLimitLine(llmin)
-        
         barChart.chartDescription?.text = ""
         barChart.data = chartData
-        
-        //barChart.saveToPath(path: String, format: ChartViewBase.ImageFormat, compressionQuality: Double)
-
     }
 }

@@ -48,26 +48,8 @@ class FallRiskVCSecond: UIViewController {
     
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Scores.plist")
     
-    let ageIndex = 0
-    let fallHistoryIndex = 1
-    let bowelIndex = 2
-    let medicationIndex = 3
-    let patientCareEquipmentIndex = 4
-    let mobilityIndex = 5
-    let cognitionIndex = 6
-    let incontinenceIndex = 7
-    let urgencyOrFrequencyIndex = 8
-    let requiresAssistanceIndex = 9
-    let unsteadyGaitIndex = 10
-    let impairmentMobilityIndex = 11
-    let alteredAwarenessIndex = 12
-    let impulsiveIndex = 13
-    let lackOfUnderstandingOfOnesLimitationsIndex = 14
-    
-    let image = UIImage(named: "checkbox-unchecked.png")
-    let imageChecked = UIImage(named: "checkbox-checked.png")
-    
     var calcFR = CalculateFallRiskScores()
+    var constants = Constants()
     
     //MARK: ViewDidLoad etc
     
@@ -102,108 +84,98 @@ class FallRiskVCSecond: UIViewController {
     
     @IBAction func noHighFallRiskDrugButtonTapped(_ sender: UIButton) {
         medication = 0
-        scoresArray[medicationIndex].score = medication
+        scoresArray[constants.medicationIndex].score = medication
         saveScores()
         calculateScore()
         medicationButtonImages()
-        let image = UIImage(named: "checkbox-checked.png")
-        noHighFallRiskDrugButton.setImage(image, for: .normal)
+        noHighFallRiskDrugButton.setImage(constants.imageChecked, for: .normal)
     }
     
     @IBAction func oneHighFallRiskDrugButtonTapped(_ sender: UIButton) {
         medication = 3
-        scoresArray[medicationIndex].score = medication
+        scoresArray[constants.medicationIndex].score = medication
         saveScores()
         calculateScore()
         medicationButtonImages()
-        let image = UIImage(named: "checkbox-checked.png")
-        oneHighFallRiskDrugButton.setImage(image, for: .normal)
+        oneHighFallRiskDrugButton.setImage(constants.imageChecked, for: .normal)
     }
     
     @IBAction func twoOrMoreHighFallRiskDrugButtonTapped(_ sender: UIButton) {
         medication = 5
-        scoresArray[medicationIndex].score = medication
+        scoresArray[constants.medicationIndex].score = medication
         saveScores()
         calculateScore()
         medicationButtonImages()
-        let image = UIImage(named: "checkbox-checked.png")
-        twoOrMoreHighFallRiskDrugButton.setImage(image, for: .normal)
+        twoOrMoreHighFallRiskDrugButton.setImage(constants.imageChecked, for: .normal)
     }
     
     @IBAction func sedatedProcedureWithin24HoursButtonTapped(_ sender: UIButton) {
         medication = 7
-        scoresArray[medicationIndex].score = medication
+        scoresArray[constants.medicationIndex].score = medication
         saveScores()
         calculateScore()
         medicationButtonImages()
-        let image = UIImage(named: "checkbox-checked.png")
-        sedatedProcedureWithin24HoursButton.setImage(image, for: .normal)
+        sedatedProcedureWithin24HoursButton.setImage(constants.imageChecked, for: .normal)
     }
     
     @IBAction func noEquipmentPresentButtonTapped(_ sender: UIButton) {
         patientCareEquipment = 0
-        scoresArray[medicationIndex].score = medication
+        scoresArray[constants.medicationIndex].score = medication
         saveScores()
         calculateScore()
         patientCareEquipmentButtonImages()
-        let image = UIImage(named: "checkbox-checked.png")
-        noEquipmentPresentButton.setImage(image, for: .normal)
+        noEquipmentPresentButton.setImage(constants.imageChecked, for: .normal)
     }
     
     @IBAction func oneEquipmentPresentButtonTapped(_ sender: UIButton) {
         patientCareEquipment = 1
-        scoresArray[patientCareEquipmentIndex].score = patientCareEquipment
+        scoresArray[constants.patientCareEquipmentIndex].score = patientCareEquipment
         saveScores()
         calculateScore()
         patientCareEquipmentButtonImages()
-        let image = UIImage(named: "checkbox-checked.png")
-        oneEquipmentPresentButton.setImage(image, for: .normal)
+        oneEquipmentPresentButton.setImage(constants.imageChecked, for: .normal)
     }
     
     @IBAction func twoEquipmentPresentButtonTapped(_ sender: UIButton) {
         patientCareEquipment = 2
-        scoresArray[patientCareEquipmentIndex].score = patientCareEquipment
+        scoresArray[constants.patientCareEquipmentIndex].score = patientCareEquipment
         saveScores()
         calculateScore()
         patientCareEquipmentButtonImages()
-        let image = UIImage(named: "checkbox-checked.png")
-        twoEquipmentPresentButton.setImage(image, for: .normal)
+        twoEquipmentPresentButton.setImage(constants.imageChecked, for: .normal)
     }
     
     @IBAction func threeEquipmentPresentButtonTapped(_ sender: UIButton) {
         patientCareEquipment = 3
-        scoresArray[patientCareEquipmentIndex].score = patientCareEquipment
+        scoresArray[constants.patientCareEquipmentIndex].score = patientCareEquipment
         saveScores()
         calculateScore()
         patientCareEquipmentButtonImages()
-        let image = UIImage(named: "checkbox-checked.png")
-        threeEquipmentPresentButton.setImage(image, for: .normal)
+        threeEquipmentPresentButton.setImage(constants.imageChecked, for: .normal)
     }
    
     //MARK: Functions
     
     func changeImage(sender: UIButton) {
-        if sender.currentImage == image {
-            sender.setImage(imageChecked, for: .normal)
+        if sender.currentImage == constants.imageUnchecked {
+            sender.setImage(constants.imageChecked, for: .normal)
         } else {
-            sender.setImage(image, for: .normal)
+            sender.setImage(constants.imageUnchecked, for: .normal)
         }
     }
     
     func medicationButtonImages() {
-        let image = UIImage(named: "checkbox-unchecked.png")
-        noHighFallRiskDrugButton.setImage(image, for: .normal)
-        oneHighFallRiskDrugButton.setImage(image, for: .normal)
-        twoOrMoreHighFallRiskDrugButton.setImage(image, for: .normal)
-        sedatedProcedureWithin24HoursButton.setImage(image, for: .normal)
+        noHighFallRiskDrugButton.setImage(constants.imageUnchecked, for: .normal)
+        oneHighFallRiskDrugButton.setImage(constants.imageUnchecked, for: .normal)
+        twoOrMoreHighFallRiskDrugButton.setImage(constants.imageUnchecked, for: .normal)
+        sedatedProcedureWithin24HoursButton.setImage(constants.imageUnchecked, for: .normal)
     }
     
     func patientCareEquipmentButtonImages() {
-        let image = UIImage(named: "checkbox-unchecked.png")
-        noEquipmentPresentButton.setImage(image, for: .normal)
-        oneEquipmentPresentButton.setImage(image, for: .normal)
-        twoEquipmentPresentButton.setImage(image, for: .normal)
-        threeEquipmentPresentButton.setImage(image, for: .normal)
+        noEquipmentPresentButton.setImage(constants.imageUnchecked, for: .normal)
+        oneEquipmentPresentButton.setImage(constants.imageUnchecked, for: .normal)
+        twoEquipmentPresentButton.setImage(constants.imageUnchecked, for: .normal)
+        threeEquipmentPresentButton.setImage(constants.imageUnchecked, for: .normal)
     }
     
     func calculateScore() {

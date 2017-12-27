@@ -48,26 +48,9 @@ class FallRiskVCThird: UIViewController {
     
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Scores.plist")
     
-    let ageIndex = 0
-    let fallHistoryIndex = 1
-    let bowelIndex = 2
-    let medicationIndex = 3
-    let patientCareEquipmentIndex = 4
-    let mobilityIndex = 5
-    let cognitionIndex = 6
-    let incontinenceIndex = 7
-    let urgencyOrFrequencyIndex = 8
-    let requiresAssistanceIndex = 9
-    let unsteadyGaitIndex = 10
-    let impairmentMobilityIndex = 11
-    let alteredAwarenessIndex = 12
-    let impulsiveIndex = 13
-    let lackOfUnderstandingOfOnesLimitationsIndex = 14
-    
-    let image = UIImage(named: "checkbox-unchecked.png")
-    let imageChecked = UIImage(named: "checkbox-checked.png")
     
     var calcFR = CalculateFallRiskScores()
+    var constants = Constants()
     
     
     // MARK: ViewDidLoad etc
@@ -97,59 +80,59 @@ class FallRiskVCThird: UIViewController {
     
     @IBAction func mobilityNoIssuesButtonTapped(_ sender: UIButton) {
         changeImage(sender: sender)
-        if sender.currentImage == imageChecked {
+        if sender.currentImage == constants.imageChecked {
             mobility = 0
         } else {
             mobility = 0
         }
-        scoresArray[mobilityIndex].score = mobility
+        scoresArray[constants.mobilityIndex].score = mobility
         saveScores()
         calculateScore()
     }
     
     @IBAction func mobilityRequiresAssistanceButtonTapped(_ sender: UIButton) {
         changeImage(sender: sender)
-        if sender.currentImage == imageChecked {
+        if sender.currentImage == constants.imageChecked {
             requiresAssistance = 2
         } else {
             requiresAssistance = 0
         }
-        scoresArray[requiresAssistanceIndex].score = requiresAssistance
+        scoresArray[constants.requiresAssistanceIndex].score = requiresAssistance
         saveScores()
         calculateScore()
     }
     
     @IBAction func mobityUnsteadyGaitButtonTapped(_ sender: UIButton) {
         changeImage(sender: sender)
-        if sender.currentImage == imageChecked {
+        if sender.currentImage == constants.imageChecked {
             unsteadyGait = 2
         } else {
             unsteadyGait = 0
         }
-        scoresArray[unsteadyGaitIndex].score = unsteadyGait
+        scoresArray[constants.unsteadyGaitIndex].score = unsteadyGait
         saveScores()
         calculateScore()
     }
     
     @IBAction func mobityVisualAudioButtonTapped(_ sender: UIButton) {
         changeImage(sender: sender)
-        if sender.currentImage == imageChecked {
+        if sender.currentImage == constants.imageChecked {
             impairmentMobility = 2
         } else {
             impairmentMobility = 0
         }
-        scoresArray[impairmentMobilityIndex].score = impairmentMobility
+        scoresArray[constants.impairmentMobilityIndex].score = impairmentMobility
         saveScores()
         calculateScore()
     }
     
     @IBAction func cognitionNoIssuesButtonTapped(_ sender: UIButton) {
         changeImage(sender: sender)
-        if sender.currentImage == imageChecked {
-            cognitionAlteredAwarenessButton.setImage(image, for: .normal)
-            cognitionImpulsiveButton.setImage(image, for: .normal)
-            cognitionImpulsiveButton.setImage(image, for: .normal)
-            cognitionAwarenessPhysicalOrCognitiveAbilitiesButton.setImage(image, for: .normal)
+        if sender.currentImage == constants.imageChecked {
+            cognitionAlteredAwarenessButton.setImage(constants.imageUnchecked, for: .normal)
+            cognitionImpulsiveButton.setImage(constants.imageUnchecked, for: .normal)
+            cognitionImpulsiveButton.setImage(constants.imageUnchecked, for: .normal)
+            cognitionAwarenessPhysicalOrCognitiveAbilitiesButton.setImage(constants.imageUnchecked, for: .normal)
             impulsive = 0
             alteredAwareness = 0
             lackOfUnderstandingOfOnesLimitations = 0
@@ -157,43 +140,43 @@ class FallRiskVCThird: UIViewController {
         } else {
             cognition = 0
         }
-        scoresArray[impulsiveIndex].score = impulsive
+        scoresArray[constants.impulsiveIndex].score = impulsive
         saveScores()
         calculateScore()
     }
     
     @IBAction func cognitionAlteredAwarenessButtonTapped(_ sender: UIButton) {
         changeImage(sender: sender)
-        if sender.currentImage == imageChecked {
+        if sender.currentImage == constants.imageChecked {
             alteredAwareness = 1
         } else {
             alteredAwareness = 0
         }
-        scoresArray[alteredAwarenessIndex].score = alteredAwareness
+        scoresArray[constants.alteredAwarenessIndex].score = alteredAwareness
         saveScores()
         calculateScore()
     }
     
     @IBAction func cognitionImpulsiveButtonTapped(_ sender: UIButton) {
         changeImage(sender: sender)
-        if sender.currentImage == imageChecked {
+        if sender.currentImage == constants.imageChecked {
             impulsive = 2
         } else {
             impulsive = 0
         }
-        scoresArray[impulsiveIndex].score = impulsive
+        scoresArray[constants.impulsiveIndex].score = impulsive
         saveScores()
         calculateScore()
     }
     
     @IBAction func cognitionAwarenessPhysicalOrCognitiveAbilitiesButtonTapped(_ sender: UIButton) {
         changeImage(sender: sender)
-        if sender.currentImage == imageChecked {
+        if sender.currentImage == constants.imageChecked {
             lackOfUnderstandingOfOnesLimitations = 4
         } else {
             lackOfUnderstandingOfOnesLimitations = 0
         }
-        scoresArray[lackOfUnderstandingOfOnesLimitationsIndex].score = lackOfUnderstandingOfOnesLimitations
+        scoresArray[constants.lackOfUnderstandingOfOnesLimitationsIndex].score = lackOfUnderstandingOfOnesLimitations
         saveScores()
         calculateScore()
     }
@@ -201,10 +184,10 @@ class FallRiskVCThird: UIViewController {
     // MARk: Functions
     
     func changeImage(sender: UIButton) {
-        if sender.currentImage == image {
-            sender.setImage(imageChecked, for: .normal)
+        if sender.currentImage == constants.imageUnchecked {
+            sender.setImage(constants.imageChecked, for: .normal)
         } else {
-            sender.setImage(image, for: .normal)
+            sender.setImage(constants.imageUnchecked, for: .normal)
         }
     }
     

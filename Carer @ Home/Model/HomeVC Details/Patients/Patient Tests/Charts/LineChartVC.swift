@@ -15,7 +15,6 @@ class LineChartVC: UIViewController {
     
     // MARK: IB Outlets
     
-    
     @IBOutlet weak var lineChart: LineChartView!
     @IBOutlet weak var bloodGlucoseSegmentControl: UISegmentedControl!
     @IBOutlet weak var headerLabel: UILabel!
@@ -37,7 +36,6 @@ class LineChartVC: UIViewController {
         dateToday()
         createDataSets()
         setChart(dataPoints: myDateArray, values: myArray)
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,19 +71,14 @@ class LineChartVC: UIViewController {
             myDateArray.append("\(day)-\(month)-\(year)")
         }
         myDateArray.reverse()
-        //print(myDateArray)
     }
     
     func setChart(dataPoints : [String], values : [Double]) {
         var dataEntries: [ChartDataEntry] = []
-        
         for i in 0..<dataPoints.count {
             let dataEntry = ChartDataEntry(x: Double(i), y: values[i])
-
             dataEntries.append(dataEntry)
         }
-        //print(dataEntries)
-        
         let chartDataSet = LineChartDataSet(values: dataEntries, label: title)
         chartDataSet.colors = [UIColor.blue]
         let chartData = LineChartData(dataSet: chartDataSet)
@@ -100,12 +93,7 @@ class LineChartVC: UIViewController {
         lineChart.rightAxis.addLimitLine(llmin)
         chartDataSet.circleColors = [UIColor.darkGray]
         chartDataSet.lineWidth = 3
-        
         lineChart.chartDescription?.text = ""
         lineChart.data = chartData
-
-        //barChart.saveToPath(path: String, format: ChartViewBase.ImageFormat, compressionQuality: Double)
     }
-    
-
 }
