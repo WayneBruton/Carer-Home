@@ -35,6 +35,7 @@
 		B081D5D51FD283D10089A5FE /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B081D5D41FD283D10089A5FE /* Conversions.swift */; };
 		B08439801FEA2DC700EB8F4A /* CalculateFallRiskScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = B084397F1FEA2DC700EB8F4A /* CalculateFallRiskScores.swift */; };
 		B0864A4B1FD573C7000AEA68 /* patientDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0864A4A1FD573C7000AEA68 /* patientDetailVC.swift */; };
+		B09245661FF7964C00B97BDF /* RespiratoryRateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09245651FF7964C00B97BDF /* RespiratoryRateVC.swift */; };
 		B09D234E1FDFABA400750C74 /* BarChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D234D1FDFABA400750C74 /* BarChartVC.swift */; };
 		B0A65D2E1FDA8D4D0046AEA6 /* keyboard_tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B0A65D2D1FDA8D4D0046AEA6 /* keyboard_tap.mp3 */; };
 		B0B193E21FEE134A00C3C731 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B193E11FEE134A00C3C731 /* Constants.swift */; };
@@ -74,6 +75,7 @@
 		B081D5D41FD283D10089A5FE /* Conversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversions.swift; sourceTree = "<group>"; };
 		B084397F1FEA2DC700EB8F4A /* CalculateFallRiskScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateFallRiskScores.swift; sourceTree = "<group>"; };
 		B0864A4A1FD573C7000AEA68 /* patientDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientDetailVC.swift; sourceTree = "<group>"; };
+		B09245651FF7964C00B97BDF /* RespiratoryRateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespiratoryRateVC.swift; sourceTree = "<group>"; };
 		B09D234D1FDFABA400750C74 /* BarChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartVC.swift; sourceTree = "<group>"; };
 		B0A65D2D1FDA8D4D0046AEA6 /* keyboard_tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = keyboard_tap.mp3; sourceTree = "<group>"; };
 		B0B193E11FEE134A00C3C731 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				B01D64F51FD81E5A00DCCD13 /* TemperatureVC.swift */,
 				B0C5C0261FDAA0F800374E7A /* PainVC.swift */,
 				B07D03DC1FDBFD6A00C81255 /* BloodSugarVC.swift */,
+				B09245651FF7964C00B97BDF /* RespiratoryRateVC.swift */,
 				B01AF6301FE5346600220113 /* Fall Risk PageViewing */,
 				B09D234C1FDFAB8000750C74 /* Charts */,
 			);
@@ -391,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B03DEBF31FD18FC30043E91C /* PatientsVC.swift in Sources */,
+				B09245661FF7964C00B97BDF /* RespiratoryRateVC.swift in Sources */,
 				B03DEBF91FD1901A0043E91C /* FeedbackVC.swift in Sources */,
 				B0BDEA431FDD0734006D0C65 /* ClickSound.swift in Sources */,
 				B0465AC61FCDBFDC0097FA42 /* RegisterViewController.swift in Sources */,

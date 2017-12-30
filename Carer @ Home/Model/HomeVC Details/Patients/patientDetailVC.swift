@@ -45,7 +45,7 @@ class patientDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     "Patient Details" 0
     "Blood Glucose" 2
     "Blood Pressure" - Done
-    "Fall Risk Scale" 4
+    "Fall Risk Scale" - Done
     "Fluid Intake" - Done
     "Funcional Scale (Fim)" 6
     "Mental State" 7
@@ -98,6 +98,11 @@ class patientDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
         if segue.identifier == "Fall Risk" {
             let VC = segue.destination as! PageViewController
+            VC.title = "\(navTitle) - \(vcTitle)"
+            navigationItem.title = ""
+        }
+        if segue.identifier == "Respiratory Rate" {
+            let VC = segue.destination as! RespiratoryRateVC
             VC.title = "\(navTitle) - \(vcTitle)"
             navigationItem.title = ""
         }
@@ -155,7 +160,7 @@ class patientDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         case 10:
             performSegue(withIdentifier: "Pulse", sender: self)
         case 11:
-            ProgressHUD.showSuccess("Open: \(vcTitle):  \(navTitle)")
+            performSegue(withIdentifier: "Respiratory Rate", sender: self)
         case 12:
             performSegue(withIdentifier: "temperature", sender: self)
         case 13:
