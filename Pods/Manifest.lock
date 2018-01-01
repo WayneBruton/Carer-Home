@@ -1,0 +1,32 @@
+PODS:
+  - Charts (3.0.4):
+    - Charts/Core (= 3.0.4)
+  - Charts/Core (3.0.4)
+  - GMStepper (2.1)
+  - MARoundButton (0.1.7)
+  - ProgressHUD (2.51)
+  - RoundedSwitch (2.0.1)
+  - SGauge (0.0.3)
+  - VerticalSteppedSlider (0.1.0)
+
+DEPENDENCIES:
+  - Charts
+  - GMStepper
+  - MARoundButton
+  - ProgressHUD
+  - RoundedSwitch
+  - SGauge
+  - VerticalSteppedSlider
+
+SPEC CHECKSUMS:
+  Charts: 0705898046257443f0afbbc3179f4b67507b6e48
+  GMStepper: 8994824040d57d952134e409b7724d05a1a41c18
+  MARoundButton: 31967f6c80b89a795075ea6593d1102320d28dac
+  ProgressHUD: 54b4c2fa202bf3da7dddc1c698ae4e6376333bd9
+  RoundedSwitch: 85ea55811bbeb5747dd99e2c2290c86e820decb5
+  SGauge: 3238bf17e735cebe021089f07175db77e9250a8e
+  VerticalSteppedSlider: c1513f095cda3d27e327de7fab6d3f8425a8dc46
+
+PODFILE CHECKSUM: c977b45e32d84830bde23be27c3379d3494c727e
+
+COCOAPODS: 1.3.1
