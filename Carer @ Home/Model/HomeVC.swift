@@ -22,6 +22,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         super.viewDidLoad()
         tableViewHome.delegate = self
         tableViewHome.dataSource = self
+        tableViewHome.rowHeight = 60
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

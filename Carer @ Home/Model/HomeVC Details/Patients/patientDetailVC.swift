@@ -26,6 +26,7 @@ class patientDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         testsData.delegate = self
         testsData.dataSource = self
         vcTitle = self.title!
+        testsData.rowHeight = 60
         print(vcTitle)
     }
 
@@ -106,6 +107,11 @@ class patientDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
             VC.title = "\(navTitle) - \(vcTitle)"
             navigationItem.title = ""
         }
+        if segue.identifier == "FallRisk" {
+            let VC = segue.destination as! FallRiskVC
+            VC.title = "\(navTitle) - \(vcTitle)"
+            navigationItem.title = ""
+        }
     }
     
     // MARK: Table View Setup
@@ -140,7 +146,8 @@ class patientDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         case 3:
             performSegue(withIdentifier: "Blood Pressure", sender: self)
         case 4:
-            performSegue(withIdentifier: "Fall Risk", sender: self)
+            //performSegue(withIdentifier: "Fall Risk", sender: self)
+            performSegue(withIdentifier: "FallRisk", sender: self)
 //            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as! PageViewController
 //
 //            //vc.lastTempReading = self.temp

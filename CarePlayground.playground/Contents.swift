@@ -93,6 +93,9 @@ for i in 0...basicArray.count - 1 {
 
 print(newArray1)
 
+if basicArray.index(of: "incontinence") == 7 {
+    print("Hellooooooo")
+}
 
 
 

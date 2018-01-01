@@ -28,6 +28,7 @@
 		B03DEBFB1FD190330043E91C /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03DEBFA1FD190330043E91C /* NewsVC.swift */; };
 		B0465AC61FCDBFDC0097FA42 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0465AC51FCDBFDC0097FA42 /* RegisterViewController.swift */; };
 		B0465ACC1FCDC0680097FA42 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B0465ACB1FCDC0680097FA42 /* Default-568h@2x.png */; };
+		B04C765B1FF8E80B00CBFC1C /* FallRiskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04C765A1FF8E80B00CBFC1C /* FallRiskVC.swift */; };
 		B04D503A1FD7C07300FECD2B /* PulseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D50391FD7C07300FECD2B /* PulseVC.swift */; };
 		B071FFC41FD6C2FA00640132 /* FluidIntakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B071FFC31FD6C2FA00640132 /* FluidIntakeVC.swift */; };
 		B07D03DD1FDBFD6A00C81255 /* BloodSugarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D03DC1FDBFD6A00C81255 /* BloodSugarVC.swift */; };
@@ -68,6 +69,7 @@
 		B03DEBFA1FD190330043E91C /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
 		B0465AC51FCDBFDC0097FA42 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B0465ACB1FCDC0680097FA42 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B04C765A1FF8E80B00CBFC1C /* FallRiskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallRiskVC.swift; sourceTree = "<group>"; };
 		B04D50391FD7C07300FECD2B /* PulseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseVC.swift; sourceTree = "<group>"; };
 		B071FFC31FD6C2FA00640132 /* FluidIntakeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluidIntakeVC.swift; sourceTree = "<group>"; };
 		B07D03DC1FDBFD6A00C81255 /* BloodSugarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodSugarVC.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				B01D64F51FD81E5A00DCCD13 /* TemperatureVC.swift */,
 				B0C5C0261FDAA0F800374E7A /* PainVC.swift */,
 				B07D03DC1FDBFD6A00C81255 /* BloodSugarVC.swift */,
+				B04C765A1FF8E80B00CBFC1C /* FallRiskVC.swift */,
 				B09245651FF7964C00B97BDF /* RespiratoryRateVC.swift */,
 				B01AF6301FE5346600220113 /* Fall Risk PageViewing */,
 				B09D234C1FDFAB8000750C74 /* Charts */,
@@ -409,6 +412,7 @@
 				B03DEBF51FD18FE20043E91C /* MessagesVC.swift in Sources */,
 				B012337B1FCD23BE00B06B3A /* AppDelegate.swift in Sources */,
 				B07D2B6B1FED15C100EAE3B9 /* SaveFallRiskScores.swift in Sources */,
+				B04C765B1FF8E80B00CBFC1C /* FallRiskVC.swift in Sources */,
 				B04D503A1FD7C07300FECD2B /* PulseVC.swift in Sources */,
 				B081D5D51FD283D10089A5FE /* Conversions.swift in Sources */,
 				B0C5C0271FDAA0F800374E7A /* PainVC.swift in Sources */,

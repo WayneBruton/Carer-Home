@@ -23,6 +23,7 @@ class PatientsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         patientsTableView.delegate = self
         patientsTableView.dataSource = self
         vcTitle = self.title!
+        patientsTableView.rowHeight = 60
         
     }
     
