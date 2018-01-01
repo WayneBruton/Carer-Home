@@ -997,320 +997,328 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBq-ef-803">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    Age - Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNP-sm-7jj">
-                                                <rect key="frame" x="10" y="8" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M57-uS-dpG">
-                                                <rect key="frame" x="10" y="55" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title=" &lt; 60  " image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="ageUnder60ButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="Nt7-e0-2dG"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlt-uE-gKU">
-                                                <rect key="frame" x="10" y="106" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title=" 60 - 69" image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="age60To69ButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="3XS-ay-jhs"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I57-ol-WKb">
-                                                <rect key="frame" x="10" y="150" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title=" 70 - 79" image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="age70To79ButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="JWW-4j-ENB"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KiY-no-Ozw">
-                                                <rect key="frame" x="10" y="201" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title=" &gt; = 80   " image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="ageOver80ButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="Ddj-fK-P1g"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fall History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nj-R7-tN2">
-                                                <rect key="frame" x="10" y="262" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CN3-0c-ATt">
-                                                <rect key="frame" x="10" y="318" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title=" 1 or more falls within 6 months" image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="fallsWithin6MonthsButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="2kh-C1-V2v"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Elimination, Bowel &amp; Urine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9F-lX-EeC">
-                                                <rect key="frame" x="10" y="382" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBd-5X-5AG">
-                                                <rect key="frame" x="10" y="443" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="Urgency or Frequency " image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="bowelUrgencyButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="hXW-17-w5n"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="311-HR-Q3N">
-                                                <rect key="frame" x="10" y="489" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="Incontinence                 " image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="bowelIncontinenceButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="mcD-4E-l1y"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Hon-t3-xAP">
+                                                <rect key="frame" x="10" y="10" width="355" height="539"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age - Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNP-sm-7jj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M57-uS-dpG">
+                                                        <rect key="frame" x="0.0" y="54" width="355" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title=" &lt; 60  " image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="ageUnder60ButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="Nt7-e0-2dG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlt-uE-gKU">
+                                                        <rect key="frame" x="0.0" y="108" width="355" height="53.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title=" 60 - 69" image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="age60To69ButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="3XS-ay-jhs"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I57-ol-WKb">
+                                                        <rect key="frame" x="0.0" y="161.5" width="355" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title=" 70 - 79" image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="age70To79ButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="JWW-4j-ENB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KiY-no-Ozw">
+                                                        <rect key="frame" x="0.0" y="215.5" width="355" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title=" &gt; = 80   " image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="ageOver80ButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="Ddj-fK-P1g"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fall History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nj-R7-tN2">
+                                                        <rect key="frame" x="0.0" y="269.5" width="355" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CN3-0c-ATt">
+                                                        <rect key="frame" x="0.0" y="323.5" width="355" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title=" 1 or more falls within 6 months" image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="fallsWithin6MonthsButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="2kh-C1-V2v"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elimination, Bowel &amp; Urine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9F-lX-EeC">
+                                                        <rect key="frame" x="0.0" y="377.5" width="355" height="53.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBd-5X-5AG">
+                                                        <rect key="frame" x="0.0" y="431" width="355" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="Urgency or Frequency " image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="bowelUrgencyButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="hXW-17-w5n"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="311-HR-Q3N">
+                                                        <rect key="frame" x="0.0" y="485" width="355" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="Incontinence                 " image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="bowelIncontinenceButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="mcD-4E-l1y"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="Hon-t3-xAP" firstAttribute="top" secondItem="HBq-ef-803" secondAttribute="top" constant="10" id="Ttw-5Z-Gsb"/>
+                                            <constraint firstAttribute="trailing" secondItem="Hon-t3-xAP" secondAttribute="trailing" constant="10" id="Uxo-gP-wrw"/>
+                                            <constraint firstItem="Hon-t3-xAP" firstAttribute="leading" secondItem="HBq-ef-803" secondAttribute="leading" constant="10" id="YvD-te-Oc2"/>
                                             <constraint firstAttribute="height" constant="559" id="cNo-40-h7G"/>
+                                            <constraint firstAttribute="bottom" secondItem="Hon-t3-xAP" secondAttribute="bottom" constant="10" id="fCE-Qd-YaP"/>
                                             <constraint firstAttribute="width" constant="375" id="tmp-xQ-v4L"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HqF-Mw-2FN">
                                         <rect key="frame" x="0.0" y="1118" width="375" height="559"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="   Mobilty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoX-6P-hx7">
-                                                <rect key="frame" x="10" y="19" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWr-6E-8GY">
-                                                <rect key="frame" x="10" y="88" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="Unsteady gait                    " image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="mobilityUnsteadyGaitButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="ltk-gU-u7g"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TML-4b-c47">
-                                                <rect key="frame" x="10" y="133" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="Visual / audio impairment" image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="mobilityVisualAudioImpairmentButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="rTg-nU-M5g"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWD-XZ-CMJ">
-                                                <rect key="frame" x="10" y="178" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="Requires assistance         " image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="mobilityRequiresAssistanceButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="7x2-go-pAl"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="   Cognition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFd-cA-Ass">
-                                                <rect key="frame" x="10" y="235" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1h-Br-gvC">
-                                                <rect key="frame" x="10" y="337" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="Altered awareness of environment                   " image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="cognitionAlteredAwarenessButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="qI2-hn-qzb"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tfO-QK-NB2">
-                                                <rect key="frame" x="10" y="384" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="Understanding of physical/cognitive limitations" image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="cognitionUnderstandingLimitationsButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="Yhi-aC-ccc"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sj2-Ca-gaC">
-                                                <rect key="frame" x="10" y="429" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="Impulsive                                                           " image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="cognitionImpulsiveButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="5QQ-jn-Fe9"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgj-aa-NO2">
-                                                <rect key="frame" x="119" y="508" width="87" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.078431372550000003" green="0.2274509804" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Save">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="saveButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="2g7-uR-Iky"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8QQ-Ut-Z2c">
+                                                <rect key="frame" x="10" y="10" width="355" height="539"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobilty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoX-6P-hx7">
+                                                        <rect key="frame" x="10" y="0.0" width="335" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWr-6E-8GY">
+                                                        <rect key="frame" x="10" y="60" width="335" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="Unsteady gait                    " image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="mobilityUnsteadyGaitButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="ltk-gU-u7g"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TML-4b-c47">
+                                                        <rect key="frame" x="10" y="120" width="335" height="59.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="Visual / audio impairment" image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="mobilityVisualAudioImpairmentButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="rTg-nU-M5g"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWD-XZ-CMJ">
+                                                        <rect key="frame" x="10" y="179.5" width="335" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="Requires assistance         " image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="mobilityRequiresAssistanceButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="7x2-go-pAl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cognition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFd-cA-Ass">
+                                                        <rect key="frame" x="10" y="239.5" width="335" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1h-Br-gvC">
+                                                        <rect key="frame" x="0.0" y="299.5" width="355" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="Altered awareness of environment                   " image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cognitionAlteredAwarenessButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="qI2-hn-qzb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tfO-QK-NB2">
+                                                        <rect key="frame" x="0.0" y="359.5" width="355" height="59.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="Understanding of physical/cognitive limitations" image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cognitionUnderstandingLimitationsButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="Yhi-aC-ccc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sj2-Ca-gaC">
+                                                        <rect key="frame" x="0.0" y="419" width="355" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="Impulsive                                                           " image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cognitionImpulsiveButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="5QQ-jn-Fe9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgj-aa-NO2">
+                                                        <rect key="frame" x="147.5" y="479" width="60" height="60"/>
+                                                        <color key="backgroundColor" red="0.078431372550000003" green="0.2274509804" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="9oz-ib-Xbx"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Save">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="saveButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="2g7-uR-Iky"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="mWD-XZ-CMJ" firstAttribute="leading" secondItem="8QQ-Ut-Z2c" secondAttribute="leading" constant="10" id="49p-C9-lKV"/>
+                                                    <constraint firstItem="CoX-6P-hx7" firstAttribute="leading" secondItem="8QQ-Ut-Z2c" secondAttribute="leading" constant="10" id="OSL-9m-sLG"/>
+                                                    <constraint firstItem="TML-4b-c47" firstAttribute="leading" secondItem="8QQ-Ut-Z2c" secondAttribute="leading" constant="10" id="hGp-5O-m7U"/>
+                                                    <constraint firstItem="FWr-6E-8GY" firstAttribute="leading" secondItem="8QQ-Ut-Z2c" secondAttribute="leading" constant="10" id="hIV-vB-AR6"/>
+                                                    <constraint firstItem="GFd-cA-Ass" firstAttribute="leading" secondItem="8QQ-Ut-Z2c" secondAttribute="leading" constant="10" id="nbM-OF-8H3"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="8QQ-Ut-Z2c" secondAttribute="trailing" constant="10" id="BqL-Nx-8ib"/>
+                                            <constraint firstItem="8QQ-Ut-Z2c" firstAttribute="leading" secondItem="HqF-Mw-2FN" secondAttribute="leading" constant="10" id="DFx-EW-9dy"/>
+                                            <constraint firstItem="8QQ-Ut-Z2c" firstAttribute="top" secondItem="HqF-Mw-2FN" secondAttribute="top" constant="10" id="FMF-ad-rS8"/>
+                                            <constraint firstAttribute="bottom" secondItem="8QQ-Ut-Z2c" secondAttribute="bottom" constant="10" id="Ikh-fD-MvK"/>
                                             <constraint firstAttribute="height" constant="559" id="ay3-fh-ryY"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJX-O5-LoA">
                                         <rect key="frame" x="0.0" y="559" width="375" height="559"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Patient Care Equipment: tethers the patient" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijf-lI-skV">
-                                                <rect key="frame" x="10" y="17" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvL-ZY-dSj">
-                                                <rect key="frame" x="10" y="44" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="None       " image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="careEquipmentNoneButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="Yfv-Nd-YZs"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MES-T1-hNC">
-                                                <rect key="frame" x="10" y="70" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="1 present               " image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="careEquipmentOneButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="ERZ-c3-nvl"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4j-aJ-oH0">
-                                                <rect key="frame" x="10" y="111" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="2 present" image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="careEquipmentTwoButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="egT-Jy-ou8"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="mUF-a3-VE7">
-                                                <rect key="frame" x="10" y="152" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="3 or more present" image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="careEquipmentThreeButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="O8w-um-9lo"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="rqB-Zs-a8d">
-                                                <rect key="frame" x="10" y="452" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title=" Sedated procedure within past 24 hours" image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="medicationSedatedProcedureButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="P5y-qs-7dB"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoS-89-OB1">
-                                                <rect key="frame" x="10" y="225" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpM-tU-2fb">
-                                                <rect key="frame" x="10" y="292" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="No high fall risk drug                                     " image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="medicationNoRiskButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="M6O-8o-MzA"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGu-kq-vUE">
-                                                <rect key="frame" x="10" y="350" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title=" 1 high fall risk drug                                        " image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="medicationOneRiskButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="AMu-fm-dbv"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xya-JK-maa">
-                                                <rect key="frame" x="10" y="416" width="355" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title=" 2 or more high fall risk drugs                    " image="checkbox-unchecked">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="medicationTwoRiskButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="9wy-3k-Gl6"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="y2b-AZ-w2A">
+                                                <rect key="frame" x="10" y="10" width="355" height="539"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient Care Equipment: tethers the patient" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijf-lI-skV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvL-ZY-dSj">
+                                                        <rect key="frame" x="0.0" y="54" width="355" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="None       " image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="careEquipmentNoneButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="Yfv-Nd-YZs"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MES-T1-hNC">
+                                                        <rect key="frame" x="0.0" y="108" width="355" height="53.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="1 present               " image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="careEquipmentOneButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="ERZ-c3-nvl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4j-aJ-oH0">
+                                                        <rect key="frame" x="0.0" y="161.5" width="355" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="2 present" image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="careEquipmentTwoButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="egT-Jy-ou8"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="mUF-a3-VE7">
+                                                        <rect key="frame" x="0.0" y="215.5" width="355" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="3 or more present" image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="careEquipmentThreeButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="O8w-um-9lo"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoS-89-OB1">
+                                                        <rect key="frame" x="0.0" y="269.5" width="355" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpM-tU-2fb">
+                                                        <rect key="frame" x="0.0" y="323.5" width="355" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="No high fall risk drug                                     " image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="medicationNoRiskButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="M6O-8o-MzA"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGu-kq-vUE">
+                                                        <rect key="frame" x="0.0" y="377.5" width="355" height="53.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title=" 1 high fall risk drug                                        " image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="medicationOneRiskButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="AMu-fm-dbv"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xya-JK-maa">
+                                                        <rect key="frame" x="0.0" y="431" width="355" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title=" 2 or more high fall risk drugs                    " image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="medicationTwoRiskButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="9wy-3k-Gl6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="rqB-Zs-a8d">
+                                                        <rect key="frame" x="0.0" y="485" width="355" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title=" Sedated procedure within past 24 hours" image="checkbox-unchecked">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="medicationSedatedProcedureButtonTapped:" destination="4ld-Ej-rGo" eventType="touchUpInside" id="P5y-qs-7dB"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="559" id="3uZ-F2-JWk"/>
+                                            <constraint firstAttribute="bottom" secondItem="y2b-AZ-w2A" secondAttribute="bottom" constant="10" id="C7g-Nh-TbX"/>
+                                            <constraint firstItem="y2b-AZ-w2A" firstAttribute="leading" secondItem="XJX-O5-LoA" secondAttribute="leading" constant="10" id="CRp-jU-eMO"/>
+                                            <constraint firstItem="y2b-AZ-w2A" firstAttribute="top" secondItem="XJX-O5-LoA" secondAttribute="top" constant="10" id="QKN-eO-WlX"/>
+                                            <constraint firstAttribute="trailing" secondItem="y2b-AZ-w2A" secondAttribute="trailing" constant="10" id="e8t-MH-YW4"/>
                                             <constraint firstAttribute="width" constant="375" id="xCQ-fH-mMa"/>
                                         </constraints>
                                     </view>
